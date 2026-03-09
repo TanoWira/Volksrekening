@@ -1,8 +1,8 @@
 # VolksRekening 🗳️
 
-**Politieke Verantwoordelijkheidsmonitor — Nederland**
+**Politieke Verantwoordelijkheidsmonitor - Nederland**
 
-> Wie heeft het vertrouwen van het volk verdiend — en wie heeft het verbroken?
+> Wie heeft het vertrouwen van het volk verdiend - en wie heeft het verbroken?
 
 VolksRekening houdt bij wat politici beloven en wat ze er daadwerkelijk van nakomen. Op basis van objectieve criteria zoals beleidsresultaten, rechterlijke uitspraken en volksimpact krijgt elke politicus een score van 0 tot 100. Van Volksheld tot Landverrader. Transparant, onderbouwd, en zonder politieke voorkeur.
 
@@ -10,12 +10,12 @@ VolksRekening houdt bij wat politici beloven en wat ze er daadwerkelijk van nako
 
 ## 🔍 Wat doet VolksRekening?
 
-- **Belofte-tracking** — verkiezingsbeloften en regeerakkoorden worden vergeleken met wat er daadwerkelijk is uitgevoerd
-- **Volksimpact score** — was het beleid positief voor gewone burgers, of begunstigde het multinationals en vermogensbezitters?
+- **Belofte-tracking** - verkiezingsbeloften en regeerakkoorden worden vergeleken met wat er daadwerkelijk is uitgevoerd
+- **Volksimpact score** - was het beleid positief voor gewone burgers, of begunstigde het multinationals en vermogensbezitters?
 - **Drie scorelagen** die de gebruiker zelf aan/uit kan zetten:
-  - ⚖️ **Basis** — objectieve beloften en beleidsresultaten
-  - 🔵 **Internationaal Recht** — naleving van rechterlijke uitspraken en internationaal humanitair recht
-  - 🟠 **Volksgevoel** — hoe de positie van de politicus aansluit bij het meerderheidsoordeel van de bevolking (expliciet gelabeld als subjectief)
+  - ⚖️ **Basis** - objectieve beloften en beleidsresultaten
+  - 🔵 **Internationaal Recht** - naleving van rechterlijke uitspraken en internationaal humanitair recht
+  - 🟠 **Volksgevoel** - hoe de positie van de politicus aansluit bij het meerderheidsoordeel van de bevolking (expliciet gelabeld als subjectief)
 - **Verdictschaal** van Volksheld (80+) tot Landverrader (0–29), gebaseerd op berekende scores
 - **Volledige methodologiepagina** ingebouwd in de applicatie
 
@@ -165,7 +165,7 @@ Heb je een fout gevonden, wil je een belofte toevoegen of een nieuwe politicus a
 
 **Spelregels voor bijdragen:**
 - Elke claim moet herleidbaar zijn naar een publieke bron (Kamerstukken, rechterlijke uitspraken, gevestigde media, CBS/CPB/SCP)
-- Geen anonieme aanvallen — onderbouw of het gaat niet in
+- Geen anonieme aanvallen - onderbouw of het gaat niet in
 - De methode is voor alle politieke stromingen gelijk
 
 ---
@@ -178,7 +178,7 @@ Vragen, correcties of aanvullingen: [contact@volksrekening.nl](mailto:contact@vo
 
 ## 📄 Licentie
 
-MIT License — vrij te gebruiken, aan te passen en te verspreiden, mits met bronvermelding.
+MIT License - vrij te gebruiken, aan te passen en te verspreiden, mits met bronvermelding.
 
 ---
 
