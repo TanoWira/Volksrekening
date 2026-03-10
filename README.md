@@ -1,21 +1,22 @@
 # VolksRekening 🗳️
 
-**Politieke Verantwoordelijkheidsmonitor - Nederland**
+**Politieke Verantwoordelijkheidsmonitor — Nederland**
 
-> Wie heeft het vertrouwen van het volk verdiend - en wie heeft het verbroken?
+> Wie heeft het vertrouwen van het volk verdiend — en wie heeft het verbroken?
 
-VolksRekening houdt bij wat politici beloven en wat ze er daadwerkelijk van nakomen. Op basis van objectieve criteria zoals beleidsresultaten, rechterlijke uitspraken en volksimpact krijgt elke politicus een score van 0 tot 100. Van Volksheld tot Landverrader. Transparant, onderbouwd, en zonder politieke voorkeur.
+VolksRekening houdt bij wat politici beloven en wat ze er daadwerkelijk van nakomen. Op basis van objectieve criteria zoals beleidsresultaten, rechterlijke uitspraken, motiegedrag en volksimpact krijgt elke politicus een score van 0 tot 100. Van Volksheld tot Landverrader. Transparant, onderbouwd, en zonder politieke voorkeur.
 
 ---
 
 ## 🔍 Wat doet VolksRekening?
 
-- **Belofte-tracking** - verkiezingsbeloften en regeerakkoorden worden vergeleken met wat er daadwerkelijk is uitgevoerd
-- **Volksimpact score** - was het beleid positief voor gewone burgers, of begunstigde het multinationals en vermogensbezitters?
-- **Drie scorelagen** die de gebruiker zelf aan/uit kan zetten:
-  - ⚖️ **Basis** - objectieve beloften en beleidsresultaten
-  - 🔵 **Internationaal Recht** - naleving van rechterlijke uitspraken en internationaal humanitair recht
-  - 🟠 **Volksgevoel** - hoe de positie van de politicus aansluit bij het meerderheidsoordeel van de bevolking (expliciet gelabeld als subjectief)
+- **Belofte-tracking** — verkiezingsbeloften en regeerakkoorden vergeleken met wat er daadwerkelijk is uitgevoerd
+- **Volksimpact score** — was het beleid positief voor gewone burgers, of begunstigde het multinationals en vermogensbezitters?
+- **Vier scorelagen** die de gebruiker zelf aan/uit kan zetten:
+  - ⚖️ **Basis** — objectieve beloften en beleidsresultaten (altijd actief)
+  - 🔵 **Internationaal Recht** — naleving van rechterlijke uitspraken en internationaal humanitair recht
+  - 🟢 **Moties** — ingediende moties en stemgedrag op volksbelang-gerelateerde moties, gebaseerd op officiële Handelingen Tweede Kamer
+  - 🟠 **Volksgevoel** — aansluiting bij meerderheidsoordeel bevolking op basis van peilingen (expliciet gelabeld als subjectief)
 - **Verdictschaal** van Volksheld (80+) tot Landverrader (0–29), gebaseerd op berekende scores
 - **Volledige methodologiepagina** ingebouwd in de applicatie
 
@@ -32,6 +33,9 @@ VolksRekening houdt bij wat politici beloven en wat ze er daadwerkelijk van nako
 | Hugo de Jonge | CDA | Minister VWS / Volkshuisvesting |
 | Pieter Omtzigt | NSC | Kamerlid / Lijsttrekker NSC |
 | Geert Wilders | PVV | Partijleider / Informateur 2024 |
+| Thierry Baudet | FvD | Partijleider / Oprichter FvD |
+| Dilan Yeşilgüz | VVD | Fractievoorzitter / Lijsttrekker VVD |
+| Tunahan Kuzu | DENK | Fractievoorzitter / Medeoprichter DENK |
 
 ---
 
@@ -42,14 +46,14 @@ VolksRekening is één zelfstandig HTML-bestand zonder externe afhankelijkheden 
 **Lokaal openen:**
 ```bash
 # Clone de repository
-git clone https://github.com/JOUWGEBRUIKERSNAAM/volksrekening.git
+git clone https://github.com/TanoWira/Volksrekening.git
 
 # Open het bestand direct in je browser
 open index.html
 ```
 
-**Of bekijk de live versie:**
-👉 [https://JOUWGEBRUIKERSNAAM.github.io/volksrekening](https://JOUWGEBRUIKERSNAAM.github.io/volksrekening)
+**Live versie:**
+👉 [https://tanowira.github.io/Volksrekening](https://tanowira.github.io/Volksrekening)
 
 ---
 
@@ -99,23 +103,32 @@ Zoek in `index.html` de `POLITICIANS` array. Voeg een nieuw object toe volgens d
     jaar: 2024,
     type: "vg"
   },
+  mot: {
+    id: "mot",
+    belofte: "Motiegedrag volksbelang",
+    categorie: "Moties",
+    status: "nagekomen",
+    impact: "positief",
+    toelichting: "Welke moties ingediend en hoe gestemd op volksbelang-moties. Bron: Handelingen Tweede Kamer.",
+    jaar: 2024,
+    type: "mot"
+  },
   beloftes: [
     {
       id: 1,
       belofte: "Omschrijving van de belofte",
-      categorie: "Zorg",       // zie categorieën hieronder
+      categorie: "Zorg",
       status: "gebroken",
       impact: "negatief",
       toelichting: "Onderbouwde toelichting met bronverwijzing.",
       jaar: 2022
-    },
-    // voeg meer beloften toe...
+    }
   ]
 }
 ```
 
 **Beschikbare categorieën:**
-`Zorg` `Wonen` `Klimaat` `Economie` `Sociaal` `Democratie` `Financiën` `Veiligheid` `Werk` `Migratie` `Onderwijs` `Buitenland/IHL`
+`Zorg` `Wonen` `Klimaat` `Economie` `Sociaal` `Democratie` `Financiën` `Veiligheid` `Werk` `Migratie` `Onderwijs` `Buitenland/IHL` `Moties`
 
 ---
 
@@ -127,7 +140,7 @@ item_score      = (status_score + impact_score) / 2
 status_score:   nagekomen = 100 | gedeeltelijk = 50 | gebroken = 0
 impact_score:   positief  = 100 | gemengd      = 50 | negatief = 0
 
-eindscore       = gemiddelde van alle item_scores (schaal 0–100)
+eindscore       = gemiddelde van alle actieve item_scores (schaal 0–100)
 ```
 
 | Score | Verdict |
@@ -138,7 +151,7 @@ eindscore       = gemiddelde van alle item_scores (schaal 0–100)
 | 30–44 | ! VERDACHT |
 | 0–29 | ✗ LANDVERRADER |
 
-Zie de **Methodologie** pagina in de applicatie voor de volledige uitleg, bronvermelding en juridische onderbouwing.
+De gebruiker bepaalt zelf welke lagen actief zijn. De basiscore is altijd zichtbaar ter vergelijking.
 
 ---
 
@@ -151,21 +164,17 @@ VolksRekening is een opinie-analyse platform dat gebruikmaakt van het recht op v
 - De volksgevoel-laag is expliciet gelabeld als subjectief
 - Correcties worden verwerkt bij gegronde bezwaren met bronverwijzing
 
-Voor de volledige juridische positie, zie sectie 07 van de Methodologie in de applicatie.
-
 ---
 
 ## 🤝 Bijdragen
-
-Heb je een fout gevonden, wil je een belofte toevoegen of een nieuwe politicus aanleveren? Bijdragen zijn welkom.
 
 1. Fork de repository
 2. Maak je wijziging met een duidelijke bronvermelding
 3. Open een Pull Request met uitleg
 
-**Spelregels voor bijdragen:**
-- Elke claim moet herleidbaar zijn naar een publieke bron (Kamerstukken, rechterlijke uitspraken, gevestigde media, CBS/CPB/SCP)
-- Geen anonieme aanvallen - onderbouw of het gaat niet in
+**Spelregels:**
+- Elke claim herleidbaar naar een publieke bron (Kamerstukken, Handelingen, rechterlijke uitspraken, gevestigde media, CBS/CPB/SCP)
+- Geen anonieme aanvallen — onderbouw of het gaat niet in
 - De methode is voor alle politieke stromingen gelijk
 
 ---
@@ -178,7 +187,7 @@ Vragen, correcties of aanvullingen: [contact@volksrekening.nl](mailto:contact@vo
 
 ## 📄 Licentie
 
-MIT License - vrij te gebruiken, aan te passen en te verspreiden, mits met bronvermelding.
+MIT License — vrij te gebruiken, aan te passen en te verspreiden, mits met bronvermelding.
 
 ---
 
