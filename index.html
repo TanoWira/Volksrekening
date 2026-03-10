@@ -12,11 +12,9 @@
     --border:#1a2e4a; --border2:#2d4e7a;
     --text:#e2e8f0; --text2:#94a3b8; --text3:#4a6fa5; --text4:#3d5a80;
     --green:#22c55e; --yellow:#f59e0b; --red:#ef4444; --blue:#60a5fa;
-    --green-bg:#052e16; --yellow-bg:#2d1a00; --red-bg:#2d0707;
   }
   body { background:var(--bg); color:var(--text); font-family:'Source Sans 3',sans-serif; min-height:100vh; font-size:15px; line-height:1.5; }
 
-  /* NAV */
   .nav { background:var(--bg3); border-bottom:1px solid var(--border); padding:0 20px; display:flex; align-items:center; justify-content:space-between; height:52px; position:sticky; top:0; z-index:100; }
   .nav-logo { font-family:'Playfair Display',serif; font-size:20px; font-weight:900; color:#f1f5f9; cursor:pointer; letter-spacing:-0.5px; }
   .nav-logo span { color:#3b82f6; }
@@ -25,20 +23,17 @@
   .nav-link:hover { background:#111e30; color:#93c5fd; }
   .nav-link.active { background:#1e3a5f; color:#93c5fd; }
 
-  /* HEADER */
   .header { background:linear-gradient(180deg,var(--bg3) 0%,var(--bg) 100%); border-bottom:1px solid var(--border); padding:40px 20px 30px; text-align:center; }
   .header-eyebrow { font-size:10px; letter-spacing:6px; color:var(--text4); text-transform:uppercase; margin-bottom:12px; }
   .header h1 { font-family:'Playfair Display',serif; font-size:clamp(28px,6vw,56px); font-weight:900; color:#f1f5f9; letter-spacing:-1px; line-height:1.05; }
   .header h1 span { color:#3b82f6; }
   .header-sub { color:var(--text3); margin-top:10px; font-size:14px; max-width:500px; margin-left:auto; margin-right:auto; line-height:1.6; }
   .header-btns { display:flex; gap:8px; justify-content:center; margin-top:18px; flex-wrap:wrap; }
-
   .btn { background:transparent; color:var(--text3); border:1px solid var(--border); border-radius:6px; padding:9px 18px; cursor:pointer; font-size:11px; letter-spacing:2px; text-transform:uppercase; font-family:'Source Sans 3',sans-serif; transition:all 0.2s; }
   .btn:hover { background:#111e30; color:#93c5fd; }
   .btn.active { background:#1e3a5f; color:#93c5fd; border-color:#3b82f6; }
 
-  /* SCORE MODE BAR */
-  .score-banner { display:flex; gap:10px; align-items:center; justify-content:center; flex-wrap:wrap; padding:12px 16px; border-bottom:1px solid var(--border); background:var(--bg3); }
+  .score-banner { display:flex; gap:8px; align-items:center; justify-content:center; flex-wrap:wrap; padding:12px 16px; border-bottom:1px solid var(--border); background:var(--bg3); }
   .score-mode-label { font-size:10px; letter-spacing:2px; color:var(--text4); text-transform:uppercase; }
   .toggle-btn { border-radius:20px; padding:5px 14px; font-size:11px; font-weight:700; cursor:pointer; border:1px solid; font-family:'Source Sans 3',sans-serif; transition:all 0.2s; letter-spacing:1px; text-transform:uppercase; }
   .toggle-base { background:var(--bg2); color:var(--text3); border-color:var(--border); }
@@ -47,51 +42,53 @@
   .toggle-ihl.on { background:#1a0d2e; color:#c4b5fd; border-color:#7c3aed; }
   .toggle-vg { background:var(--bg2); color:#fb923c; border-color:#ea580c44; }
   .toggle-vg.on { background:#2d1000; color:#fdba74; border-color:#ea580c; }
+  .toggle-mot { background:var(--bg2); color:#34d399; border-color:#05966944; }
+  .toggle-mot.on { background:#022c1e; color:#6ee7b7; border-color:#059669; }
   .disclaimer-bar { background:#1a1000; border-bottom:1px solid #ea580c44; padding:8px 20px; font-size:11px; color:#fb923c99; text-align:center; display:none; }
   .disclaimer-bar.show { display:block; }
 
-  /* MAIN */
-  .main { max-width:960px; margin:0 auto; padding:24px 16px; }
+  .main { max-width:980px; margin:0 auto; padding:24px 16px; }
   .pol-selector { display:flex; gap:6px; flex-wrap:wrap; justify-content:center; margin-bottom:24px; }
-  .pol-btn { background:transparent; color:var(--text3); border:1px solid var(--border); border-radius:6px; padding:8px 14px; cursor:pointer; font-family:'Source Sans 3',sans-serif; font-size:13px; transition:all 0.2s; }
+  .pol-btn { background:transparent; color:var(--text3); border:1px solid var(--border); border-radius:6px; padding:7px 12px; cursor:pointer; font-family:'Source Sans 3',sans-serif; font-size:12px; transition:all 0.2s; }
   .pol-btn:hover { background:#111e30; }
   .pol-btn.active { background:#1e3a5f; color:#93c5fd; border-color:#3b82f6; font-weight:700; }
-  .pol-score { margin-left:6px; font-size:11px; }
+  .pol-score { margin-left:5px; font-size:11px; }
   .score-delta { font-size:10px; margin-left:2px; }
 
   .profile-card { background:var(--bg2); border-radius:10px; padding:22px 26px; margin-bottom:22px; display:flex; gap:20px; flex-wrap:wrap; align-items:center; border:1px solid var(--border); }
   .profile-info { flex:1; min-width:180px; }
   .profile-eyebrow { font-size:10px; letter-spacing:4px; color:var(--text4); text-transform:uppercase; }
-  .profile-name { font-family:'Playfair Display',serif; font-size:clamp(22px,4vw,34px); font-weight:900; color:#f1f5f9; line-height:1.1; margin:6px 0; }
+  .profile-name { font-family:'Playfair Display',serif; font-size:clamp(20px,4vw,32px); font-weight:900; color:#f1f5f9; line-height:1.1; margin:6px 0; }
   .profile-period { font-size:13px; color:var(--text3); }
   .score-compare { display:flex; gap:12px; align-items:flex-end; flex-wrap:wrap; }
   .score-block { text-align:center; }
-  .score-num { font-family:'Playfair Display',serif; font-size:58px; font-weight:900; line-height:1; }
+  .score-num { font-family:'Playfair Display',serif; font-size:54px; font-weight:900; line-height:1; }
   .score-denom { font-size:11px; color:var(--text4); }
   .score-label-sm { font-size:9px; letter-spacing:2px; color:var(--text4); text-transform:uppercase; margin-top:2px; }
-  .score-arrow { font-size:24px; color:var(--text4); align-self:center; }
-  .verdict-badge { border-radius:8px; padding:14px 20px; text-align:center; flex-shrink:0; min-width:160px; }
-  .verdict-icon { font-size:26px; margin-bottom:4px; }
-  .verdict-label { font-size:14px; font-weight:900; letter-spacing:2px; }
+  .score-arrow { font-size:22px; color:var(--text4); align-self:center; }
+  .verdict-badge { border-radius:8px; padding:14px 20px; text-align:center; flex-shrink:0; min-width:155px; }
+  .verdict-icon { font-size:24px; margin-bottom:4px; }
+  .verdict-label { font-size:13px; font-weight:900; letter-spacing:2px; }
   .verdict-sub { font-size:11px; color:#64748b; margin-top:4px; line-height:1.4; max-width:170px; }
 
   .tabs { display:flex; border-bottom:1px solid var(--border); margin-bottom:22px; }
-  .tab-btn { background:transparent; border:none; border-bottom:2px solid transparent; color:var(--text3); padding:10px 18px; cursor:pointer; font-family:'Source Sans 3',sans-serif; font-size:11px; letter-spacing:2px; text-transform:uppercase; transition:all 0.2s; margin-bottom:-1px; }
+  .tab-btn { background:transparent; border:none; border-bottom:2px solid transparent; color:var(--text3); padding:10px 16px; cursor:pointer; font-family:'Source Sans 3',sans-serif; font-size:11px; letter-spacing:2px; text-transform:uppercase; transition:all 0.2s; margin-bottom:-1px; }
   .tab-btn:hover { color:#93c5fd; }
   .tab-btn.active { color:#93c5fd; border-bottom-color:#3b82f6; }
 
   .stats-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin-bottom:20px; }
   .stat-card { background:var(--bg2); border:1px solid var(--border); border-radius:8px; padding:14px; text-align:center; }
-  .stat-num { font-family:'Playfair Display',serif; font-size:30px; font-weight:900; line-height:1; }
+  .stat-num { font-family:'Playfair Display',serif; font-size:28px; font-weight:900; line-height:1; }
   .stat-label { font-size:10px; color:var(--text4); letter-spacing:1px; text-transform:uppercase; margin-top:4px; }
 
   .filters { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:16px; align-items:center; }
-  .filter-btn { background:transparent; color:var(--text3); border:1px solid var(--border); border-radius:4px; padding:5px 12px; cursor:pointer; font-size:11px; font-family:'Source Sans 3',sans-serif; transition:all 0.2s; }
+  .filter-btn { background:transparent; color:var(--text3); border:1px solid var(--border); border-radius:4px; padding:5px 11px; cursor:pointer; font-size:11px; font-family:'Source Sans 3',sans-serif; transition:all 0.2s; }
   .filter-btn:hover { background:#111e30; }
   .filter-btn.active { background:#1e3a5f; color:#93c5fd; }
   .filter-divider { width:1px; height:24px; background:var(--border); margin:0 2px; }
-  .filter-ihl { border-color:#7c3aed44; color:#a78bfa; }
-  .filter-ihl.active { background:#1a0d2e; border-color:#7c3aed; color:#c4b5fd; }
+  .tag-ihl { background:#1a0d2e; color:#a78bfa; border:1px solid #7c3aed44; border-radius:3px; padding:2px 7px; font-size:10px; }
+  .tag-vg { background:#2d1000; color:#fb923c; border:1px solid #ea580c44; border-radius:3px; padding:2px 7px; font-size:10px; }
+  .tag-mot { background:#022c1e; color:#34d399; border:1px solid #05966944; border-radius:3px; padding:2px 7px; font-size:10px; }
 
   .promise-list { display:flex; flex-direction:column; gap:8px; }
   .promise-item { background:var(--bg2); border:1px solid var(--border); border-radius:8px; padding:12px 16px; cursor:pointer; transition:all 0.15s; }
@@ -99,13 +96,12 @@
   .promise-item.open { background:#0d1a2a; border-color:var(--border2); }
   .promise-item.ihl-item { border-left:3px solid #7c3aed66; }
   .promise-item.vg-item { border-left:3px solid #ea580c66; }
+  .promise-item.mot-item { border-left:3px solid #05966966; }
   .promise-header { display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap; }
   .promise-left { flex:1; min-width:160px; }
   .promise-title { font-weight:600; font-size:14px; color:#f1f5f9; margin-bottom:4px; }
   .promise-meta { display:flex; gap:6px; align-items:center; flex-wrap:wrap; }
   .cat-tag { border-radius:3px; padding:2px 7px; font-size:10px; }
-  .tag-ihl { background:#1a0d2e; color:#a78bfa; border:1px solid #7c3aed44; border-radius:3px; padding:2px 7px; font-size:10px; }
-  .tag-vg { background:#2d1000; color:#fb923c; border:1px solid #ea580c44; border-radius:3px; padding:2px 7px; font-size:10px; }
   .promise-year { color:var(--text4); font-size:11px; }
   .promise-right { display:flex; gap:8px; align-items:center; flex-shrink:0; }
   .status-badge { border-radius:4px; padding:3px 9px; font-size:11px; font-weight:700; }
@@ -122,14 +118,14 @@
   .bar-fill { border-radius:3px; height:5px; transition:width 0.6s ease; }
 
   .verdict-main { background:var(--bg2); border-radius:12px; padding:36px 28px; text-align:center; margin-bottom:20px; }
-  .verdict-big-icon { font-size:64px; line-height:1; margin-bottom:10px; }
-  .verdict-big-label { font-family:'Playfair Display',serif; font-size:28px; font-weight:900; letter-spacing:2px; margin-bottom:8px; }
+  .verdict-big-icon { font-size:60px; line-height:1; margin-bottom:10px; }
+  .verdict-big-label { font-family:'Playfair Display',serif; font-size:26px; font-weight:900; letter-spacing:2px; margin-bottom:8px; }
   .verdict-big-sub { color:var(--text2); font-size:14px; max-width:480px; margin:0 auto 20px; line-height:1.7; }
   .score-pill { display:inline-block; border-radius:8px; padding:10px 28px; }
-  .score-pill-num { font-family:'Playfair Display',serif; font-size:36px; font-weight:900; }
+  .score-pill-num { font-family:'Playfair Display',serif; font-size:34px; font-weight:900; }
   .score-pill-denom { color:var(--text4); font-size:16px; }
-  .score-breakdown { display:flex; gap:10px; justify-content:center; margin-top:14px; flex-wrap:wrap; }
-  .score-part { border-radius:6px; padding:8px 14px; font-size:12px; text-align:center; border:1px solid; }
+  .score-breakdown { display:flex; gap:8px; justify-content:center; margin-top:14px; flex-wrap:wrap; }
+  .score-part { border-radius:6px; padding:7px 12px; font-size:12px; text-align:center; border:1px solid; }
 
   .ladder { background:var(--bg2); border:1px solid var(--border); border-radius:8px; padding:18px; margin-bottom:16px; }
   .ladder-title { font-size:10px; letter-spacing:3px; color:var(--text4); text-transform:uppercase; margin-bottom:14px; }
@@ -146,25 +142,24 @@
   .impact-item { font-size:12px; color:var(--text2); margin-bottom:7px; padding-left:10px; line-height:1.4; }
   .empty-msg { color:var(--text4); font-size:12px; }
 
-  /* RANKING */
-  .ranking-section { max-width:800px; margin:0 auto; padding:28px 16px; }
+  .ranking-section { max-width:820px; margin:0 auto; padding:28px 16px; }
   .ranking-eyebrow { font-size:11px; letter-spacing:4px; color:var(--text4); text-transform:uppercase; margin-bottom:20px; text-align:center; }
   .legend { display:flex; gap:8px; flex-wrap:wrap; justify-content:center; margin-bottom:24px; }
   .legend-item { border-radius:4px; padding:4px 10px; font-size:11px; font-weight:600; }
-  .ranking-item { background:var(--bg2); border-radius:8px; padding:16px 20px; margin-bottom:10px; cursor:pointer; display:flex; align-items:center; gap:14px; transition:all 0.15s; flex-wrap:wrap; }
+  .ranking-item { background:var(--bg2); border-radius:8px; padding:14px 18px; margin-bottom:10px; cursor:pointer; display:flex; align-items:center; gap:12px; transition:all 0.15s; flex-wrap:wrap; }
   .ranking-item:hover { transform:translateX(3px); }
-  .rank-num { width:36px; height:36px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Playfair Display',serif; font-size:15px; font-weight:900; flex-shrink:0; border:2px solid var(--border); color:var(--text3); background:#111e30; }
+  .rank-num { width:34px; height:34px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Playfair Display',serif; font-size:14px; font-weight:900; flex-shrink:0; border:2px solid var(--border); color:var(--text3); background:#111e30; }
   .rank-info { flex:1; min-width:120px; }
-  .rank-name { font-weight:700; font-size:15px; color:#f1f5f9; }
-  .rank-meta { font-size:12px; color:var(--text3); margin-top:2px; }
-  .rank-scores { display:flex; gap:10px; align-items:center; flex-shrink:0; }
+  .rank-name { font-weight:700; font-size:14px; color:#f1f5f9; }
+  .rank-meta { font-size:11px; color:var(--text3); margin-top:2px; }
+  .rank-scores { display:flex; gap:8px; align-items:center; flex-shrink:0; }
   .rank-score-wrap { text-align:right; }
-  .rank-score { font-family:'Playfair Display',serif; font-size:28px; font-weight:900; line-height:1; }
+  .rank-score { font-family:'Playfair Display',serif; font-size:26px; font-weight:900; line-height:1; }
   .rank-denom { font-size:10px; color:var(--text4); }
-  .rank-verdict { border-radius:4px; padding:4px 10px; font-size:11px; font-weight:700; white-space:nowrap; flex-shrink:0; }
-  .rank-delta { font-size:11px; border-radius:4px; padding:3px 8px; flex-shrink:0; }
+  .rank-verdict { border-radius:4px; padding:4px 9px; font-size:11px; font-weight:700; white-space:nowrap; flex-shrink:0; }
+  .rank-delta { font-size:11px; border-radius:4px; padding:3px 7px; flex-shrink:0; }
 
-  /* METHODOLOGY PAGE */
+  /* METHODOLOGY */
   .meth-page { max-width:800px; margin:0 auto; padding:40px 16px; }
   .meth-hero { text-align:center; margin-bottom:48px; padding-bottom:32px; border-bottom:1px solid var(--border); }
   .meth-hero h2 { font-family:'Playfair Display',serif; font-size:clamp(24px,4vw,40px); font-weight:900; color:#f1f5f9; margin-bottom:12px; }
@@ -195,33 +190,29 @@
   .callout.legal { border-left-color:#22c55e; }
   .callout.legal strong { color:#4ade80; }
   .meth-footer { margin-top:48px; padding-top:24px; border-top:1px solid var(--border); text-align:center; color:var(--text4); font-size:12px; line-height:1.8; }
-  .meth-footer a { color:var(--text3); text-decoration:none; }
-  .meth-footer a:hover { color:#93c5fd; }
 
-  /* GENERAL */
   .hidden { display:none !important; }
-  @media (max-width:600px) {
+  @media (max-width:640px) {
     .stats-grid { grid-template-columns:repeat(2,1fr); }
     .analyse-grid,.impact-grid { grid-template-columns:1fr; }
     .profile-card { flex-direction:column; align-items:flex-start; }
-    .nav-links { gap:0; }
     .nav-link { padding:8px 8px; font-size:10px; }
+    .score-banner { gap:5px; }
+    .toggle-btn { padding:4px 10px; font-size:10px; }
   }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav class="nav">
   <div class="nav-logo" onclick="showPage('tracker')">Volks<span>Rekening</span></div>
   <div class="nav-links">
     <button class="nav-link active" id="navTracker" onclick="showPage('tracker')">Tracker</button>
-    <button class="nav-link" id="navRankingNav" onclick="showPage('tracker'); setTimeout(()=>{ if(!showRanking) toggleRanking(); },50)">Ranking</button>
+    <button class="nav-link" id="navRankingNav" onclick="showPage('tracker');setTimeout(()=>{if(!showRanking)toggleRanking();},50)">Ranking</button>
     <button class="nav-link" id="navMeth" onclick="showPage('methodologie')">Methodologie</button>
   </div>
 </nav>
 
-<!-- TRACKER PAGE -->
 <div id="pageTracker">
   <div class="header">
     <div class="header-eyebrow">Politieke Verantwoordelijkheidsmonitor — Nederland</div>
@@ -236,11 +227,12 @@
   <div class="score-banner">
     <span class="score-mode-label">Score inclusief:</span>
     <button class="toggle-btn toggle-base on" id="btnBase">⚖ Basis</button>
-    <button class="toggle-btn toggle-ihl" id="btnIhl" onclick="toggleMode('ihl')">🔵 Internationaal Recht</button>
-    <button class="toggle-btn toggle-vg" id="btnVg" onclick="toggleMode('vg')">🟠 Volksgevoel Israël/Palestina</button>
+    <button class="toggle-btn toggle-ihl" id="btnIhl" onclick="toggleMode('ihl')">🔵 Int. Recht</button>
+    <button class="toggle-btn toggle-vg" id="btnVg" onclick="toggleMode('vg')">🟠 Volksgevoel</button>
+    <button class="toggle-btn toggle-mot" id="btnMot" onclick="toggleMode('mot')">🟢 Moties</button>
   </div>
   <div class="disclaimer-bar" id="disclaimerBar">
-    ⚠ <strong>Volksgevoel-modus actief:</strong> Deze laag weerspiegelt de subjectieve publieke perceptie over de Israël-Palestina positie van politici. Dit is géén objectief criterium — het maakt het effect van politieke kleur op de eindranking inzichtelijk.
+    ⚠ <strong>Volksgevoel-modus actief:</strong> Deze laag weerspiegelt subjectieve publieke perceptie over de Israël-Palestina positie. Géén objectief criterium — bedoeld om het effect van politieke kleur op de ranking inzichtelijk te maken.
   </div>
 
   <div id="individualView" class="main">
@@ -260,11 +252,10 @@
     <div class="ranking-eyebrow">Eindranking — Volksbelang Score</div>
     <div class="legend" id="legendDiv"></div>
     <div id="rankingList"></div>
-    <div class="methodology" id="methodologyText" style="background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:16px;font-size:12px;color:var(--text3);line-height:1.7;margin-top:20px;"></div>
+    <div id="methodologyText" style="background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:16px;font-size:12px;color:var(--text3);line-height:1.7;margin-top:20px;"></div>
   </div>
 </div>
 
-<!-- METHODOLOGIE PAGE -->
 <div id="pageMethodologie" class="hidden">
   <div class="meth-page">
     <div class="meth-hero">
@@ -273,192 +264,123 @@
       <p>VolksRekening beoordeelt politici op basis van een transparante, reproduceerbare methode. Elke score is herleidbaar naar publiek beschikbare feiten. Op deze pagina leggen we precies uit hoe we tot onze scores en oordelen komen — en wat de juridische en ethische grenzen zijn.</p>
     </div>
 
-    <!-- SECTION 1 -->
     <div class="meth-section">
       <div class="meth-section-title"><span class="meth-section-num">01</span>Wat meten we?</div>
       <div class="meth-body">
-        <p>VolksRekening meet twee dingen per politicus:</p>
-        <p><strong style="color:#f1f5f9">1. Belofte-nakoming</strong> — In hoeverre heeft de politicus gedaan wat hij of zij tijdens verkiezingen of in regeerakkoorden heeft beloofd? Dit zijn aantoonbare, publiek gedocumenteerde beloften, niet interpretaties.</p>
-        <p><strong style="color:#f1f5f9">2. Volksimpact</strong> — Wat was het meetbare effect van het gevoerde beleid op de gewone burger, versus het effect op grote vermogensbezitters, multinationals of buitenlandse belangen?</p>
-        <p>Elke belofte of beleidsdaad wordt beoordeeld op beide dimensies, onafhankelijk van elkaar.</p>
+        <p>VolksRekening meet vier dimensies per politicus:</p>
+        <p><strong style="color:#f1f5f9">1. Belofte-nakoming</strong> — In hoeverre heeft de politicus gedaan wat hij of zij tijdens verkiezingen of in regeerakkoorden heeft beloofd?</p>
+        <p><strong style="color:#f1f5f9">2. Volksimpact</strong> — Wat was het meetbare effect van het gevoerde beleid op de gewone burger versus multinationals en vermogensbezitters?</p>
+        <p><strong style="color:#f1f5f9">3. Naleving internationaal recht</strong> — Heeft de politicus rechterlijke uitspraken en internationaal humanitair recht gerespecteerd?</p>
+        <p><strong style="color:#f1f5f9">4. Motiegedrag</strong> — Welke moties heeft de politicus ingediend of tegengestemd die direct het volksbelang raakten?</p>
       </div>
     </div>
 
-    <!-- SECTION 2 -->
     <div class="meth-section">
       <div class="meth-section-title"><span class="meth-section-num">02</span>De scoringsformule</div>
       <div class="meth-body">
-        <p>Elk item (belofte of beleidsdaad) krijgt twee deelscores:</p>
         <table class="meth-table">
-          <tr><th>Dimensie</th><th>Waarde</th><th>Betekenis</th></tr>
-          <tr><td class="label-cell"><span class="score-chip" style="background:#052e16;color:#22c55e">Nagekomen</span></td><td><strong style="color:#22c55e">100</strong></td><td>Belofte volledig ingelost</td></tr>
-          <tr><td class="label-cell"><span class="score-chip" style="background:#2d1a00;color:#f59e0b">Gedeeltelijk</span></td><td><strong style="color:#f59e0b">50</strong></td><td>Belofte deels ingelost of aangevangen maar niet voltooid</td></tr>
-          <tr><td class="label-cell"><span class="score-chip" style="background:#2d0707;color:#ef4444">Gebroken</span></td><td><strong style="color:#ef4444">0</strong></td><td>Belofte niet nagekomen of actief omgekeerd</td></tr>
-          <tr><td class="label-cell"><span class="score-chip" style="background:#052e16;color:#22c55e">↑ Positief</span></td><td><strong style="color:#22c55e">100</strong></td><td>Beleid had aantoonbaar positief effect voor gewone burgers</td></tr>
-          <tr><td class="label-cell"><span class="score-chip" style="background:#2d1a00;color:#f59e0b">~ Gemengd</span></td><td><strong style="color:#f59e0b">50</strong></td><td>Effect was wisselend of onduidelijk</td></tr>
-          <tr><td class="label-cell"><span class="score-chip" style="background:#2d0707;color:#ef4444">↓ Negatief</span></td><td><strong style="color:#ef4444">0</strong></td><td>Beleid pakte negatief uit voor burgers of begunstigde elites</td></tr>
+          <tr><th>Status</th><th>Waarde</th><th>Betekenis</th></tr>
+          <tr><td class="label-cell"><span class="score-chip" style="background:#052e16;color:#22c55e">Nagekomen</span></td><td><strong style="color:#22c55e">100</strong></td><td>Belofte volledig ingelost of motie correct gestemd</td></tr>
+          <tr><td class="label-cell"><span class="score-chip" style="background:#2d1a00;color:#f59e0b">Gedeeltelijk</span></td><td><strong style="color:#f59e0b">50</strong></td><td>Gedeeltelijk ingelost of wisselend stemgedrag</td></tr>
+          <tr><td class="label-cell"><span class="score-chip" style="background:#2d0707;color:#ef4444">Gebroken</span></td><td><strong style="color:#ef4444">0</strong></td><td>Niet nagekomen of actief tegengestemd</td></tr>
         </table>
         <div class="formula-box">
           item_score = (status_score + impact_score) / 2<br>
-          <span class="comment">— gemiddelde van belofte-nakoming en volksimpact per item</span><br><br>
-          eindscore = gemiddelde van alle item_scores<br>
-          <span class="comment">— afgerond op hele getallen, schaal 0–100</span>
-        </div>
-        <p>De eindscore is het gemiddelde van alle item-scores. Elke belofte telt even zwaar mee, ongeacht het onderwerp.</p>
-      </div>
-    </div>
-
-    <!-- SECTION 3 -->
-    <div class="meth-section">
-      <div class="meth-section-title"><span class="meth-section-num">03</span>De verdictschaal</div>
-      <div class="meth-body">
-        <p>Op basis van de eindscore krijgt elke politicus een van vijf kwalificaties. Dit zijn opinies gebaseerd op de berekende score, niet op persoonlijke of politieke voorkeur van de redactie.</p>
-        <div class="verdict-table">
-          <div class="verdict-row"><div class="verdict-row-icon">★</div><div class="verdict-row-name" style="color:#22c55e">VOLKSHELD</div><div class="verdict-row-range" style="color:#22c55e">80–100 punten</div><div class="verdict-row-desc">Heeft consequent in het belang van het volk gehandeld. Beloften nagekomen, beleid positief voor burgers.</div></div>
-          <div class="verdict-row"><div class="verdict-row-icon">✓</div><div class="verdict-row-name" style="color:#86efac">BETROUWBAAR</div><div class="verdict-row-range" style="color:#86efac">60–79 punten</div><div class="verdict-row-desc">Overwegend integer beleid met enige tekortkomingen. Meer goed dan kwaad gedaan.</div></div>
-          <div class="verdict-row"><div class="verdict-row-icon">~</div><div class="verdict-row-name" style="color:#f59e0b">WISSELVALLIG</div><div class="verdict-row-range" style="color:#f59e0b">45–59 punten</div><div class="verdict-row-desc">Beleid kende zowel winst als verlies voor het volk. Geen eenduidig oordeel mogelijk.</div></div>
-          <div class="verdict-row"><div class="verdict-row-icon">!</div><div class="verdict-row-name" style="color:#f97316">VERDACHT</div><div class="verdict-row-range" style="color:#f97316">30–44 punten</div><div class="verdict-row-desc">Meer eigenbelang dan volksbelang aanwijsbaar. Structureel patroon van gebroken beloften.</div></div>
-          <div class="verdict-row"><div class="verdict-row-icon">✗</div><div class="verdict-row-name" style="color:#ef4444">LANDVERRADER</div><div class="verdict-row-range" style="color:#ef4444">0–29 punten</div><div class="verdict-row-desc">Beleid structureel gericht tegen het belang van de eigen bevolking. Score gebaseerd op objectieve criteria, niet op politieke kleur.</div></div>
-        </div>
-        <div class="callout warning" style="margin-top:20px">
-          <strong>Noot over "Landverrader":</strong> Dit is een kwalificatie die volgt uit een rekenkundige score, niet een persoonlijke beschuldiging. Het label wordt uitsluitend toegekend op basis van aantoonbare feiten over beleid en beloftenakoming, en wordt altijd vergezeld van een onderbouwde toelichting per item. Het is een mening gebaseerd op feiten, zoals in de vrije pers gebruikelijk en beschermd onder artikel 10 EVRM.
+          <span class="comment">— per belofte, motie of beleidsdaad</span><br><br>
+          eindscore = gemiddelde van alle actieve item_scores<br>
+          <span class="comment">— gebruiker bepaalt welke lagen actief zijn (0–100)</span>
         </div>
       </div>
     </div>
 
-    <!-- SECTION 4 -->
     <div class="meth-section">
-      <div class="meth-section-title"><span class="meth-section-num">04</span>De drie scorelagen</div>
+      <div class="meth-section-title"><span class="meth-section-num">03</span>De vier scorelagen</div>
       <div class="meth-body">
-        <p>VolksRekening kent drie scorelagen die de gebruiker zelf aan of uit kan zetten:</p>
         <table class="meth-table">
           <tr><th>Laag</th><th>Type</th><th>Omschrijving</th></tr>
-          <tr>
-            <td><span style="color:#93c5fd;font-weight:700">⚖ Basis</span></td>
-            <td style="color:#22c55e">Objectief</td>
-            <td>Verkiezingsbeloften en beleidsresultaten op basis van publiek gedocumenteerde feiten. Altijd actief.</td>
-          </tr>
-          <tr>
-            <td><span style="color:#a78bfa;font-weight:700">🔵 Int. Recht</span></td>
-            <td style="color:#22c55e">Objectief</td>
-            <td>Naleving van rechterlijke uitspraken en internationaal humanitair recht. Gebaseerd op gerechtelijke documentatie, niet op politieke opvatting over het conflict zelf.</td>
-          </tr>
-          <tr>
-            <td><span style="color:#fb923c;font-weight:700">🟠 Volksgevoel</span></td>
-            <td style="color:#f59e0b">Subjectief</td>
-            <td>Hoe de politieke positie van de politicus aansluit bij het meerderheidsoordeel van de Nederlandse bevolking, gebaseerd op peilingen (2023–2024). Expliciet gelabeld als subjectieve laag.</td>
-          </tr>
+          <tr><td><span style="color:#93c5fd;font-weight:700">⚖ Basis</span></td><td style="color:#22c55e">Objectief</td><td>Verkiezingsbeloften en beleidsresultaten. Altijd actief.</td></tr>
+          <tr><td><span style="color:#a78bfa;font-weight:700">🔵 Int. Recht</span></td><td style="color:#22c55e">Objectief</td><td>Naleving rechterlijke uitspraken en internationaal humanitair recht.</td></tr>
+          <tr><td><span style="color:#34d399;font-weight:700">🟢 Moties</span></td><td style="color:#22c55e">Objectief</td><td>Ingediende moties en stemgedrag op volksbelang-gerelateerde moties. Gebaseerd op officiële Kamerstukken.</td></tr>
+          <tr><td><span style="color:#fb923c;font-weight:700">🟠 Volksgevoel</span></td><td style="color:#f59e0b">Subjectief</td><td>Aansluiting bij meerderheidsoordeel bevolking op basis van peilingen. Expliciet gelabeld als subjectief.</td></tr>
         </table>
         <div class="callout">
-          <strong>Waarom twee aparte lagen voor Israël/Palestina?</strong> Het is een bewuste keuze om de juridisch-objectieve laag (rechterlijke uitspraken) strikt te scheiden van de politieke perceptielaag (volksgevoel). Zo kan de gebruiker zelf kiezen welke dimensie zij of hij relevant vindt, en is er geen vermenging van feiten en mening in de basiscore.
+          <strong>Waarom moties apart meten?</strong> Motiegedrag is objectief verifieerbaar via de officiële Handelingen van de Tweede Kamer en biedt een directe maatstaf voor of een politicus in de praktijk handelt naar het volksbelang — ongeacht wat hij of zij buiten de Kamer beweert.
         </div>
       </div>
     </div>
 
-    <!-- SECTION 5 -->
     <div class="meth-section">
-      <div class="meth-section-title"><span class="meth-section-num">05</span>Bronnen en verificatie</div>
+      <div class="meth-section-title"><span class="meth-section-num">04</span>De verdictschaal</div>
       <div class="meth-body">
-        <p>Elke claim in VolksRekening is gebaseerd op ten minste één van de volgende brontypen:</p>
-        <table class="meth-table">
-          <tr><th>Brontype</th><th>Voorbeelden</th></tr>
-          <tr><td class="label-cell">Officiële overheidsdocumentatie</td><td>Kamerstukken, regeerakkoorden, jaarverslagen ministeries, Rijksbegroting</td></tr>
-          <tr><td class="label-cell">Rechterlijke uitspraken</td><td>Gerechtshof Den Haag, Hoge Raad, Europees Hof voor de Rechten van de Mens</td></tr>
-          <tr><td class="label-cell">Onafhankelijke onderzoeksrapporten</td><td>Parlementaire enquêtes (Toeslagenaffaire), Algemene Rekenkamer, WRR</td></tr>
-          <tr><td class="label-cell">Gevestigde nieuwsmedia</td><td>NOS, NRC, de Volkskrant, RTL Nieuws, Follow the Money</td></tr>
-          <tr><td class="label-cell">Wetenschappelijk onderzoek</td><td>CBS-statistieken, CPB-analyses, SCP-rapporten</td></tr>
-          <tr><td class="label-cell">Peilingen (uitsluitend volksgevoel-laag)</td><td>I&O Research, Ipsos, Kantar Public (2023–2024)</td></tr>
-        </table>
-        <p style="margin-top:14px">Wil je een claim betwisten of aanvullen? Stuur een bericht via de contactpagina met verwijzing naar de bron. Gegronde correcties worden verwerkt met vermelding van de wijzigingsdatum.</p>
+        <div class="verdict-table">
+          <div class="verdict-row"><div class="verdict-row-icon">★</div><div class="verdict-row-name" style="color:#22c55e">VOLKSHELD</div><div class="verdict-row-range" style="color:#22c55e">80–100</div><div class="verdict-row-desc">Consequent in het belang van het volk gehandeld.</div></div>
+          <div class="verdict-row"><div class="verdict-row-icon">✓</div><div class="verdict-row-name" style="color:#86efac">BETROUWBAAR</div><div class="verdict-row-range" style="color:#86efac">60–79</div><div class="verdict-row-desc">Overwegend integer beleid met enige tekortkomingen.</div></div>
+          <div class="verdict-row"><div class="verdict-row-icon">~</div><div class="verdict-row-name" style="color:#f59e0b">WISSELVALLIG</div><div class="verdict-row-range" style="color:#f59e0b">45–59</div><div class="verdict-row-desc">Zowel winst als verlies voor het volk.</div></div>
+          <div class="verdict-row"><div class="verdict-row-icon">!</div><div class="verdict-row-name" style="color:#f97316">VERDACHT</div><div class="verdict-row-range" style="color:#f97316">30–44</div><div class="verdict-row-desc">Meer eigenbelang dan volksbelang aanwijsbaar.</div></div>
+          <div class="verdict-row"><div class="verdict-row-icon">✗</div><div class="verdict-row-name" style="color:#ef4444">LANDVERRADER</div><div class="verdict-row-range" style="color:#ef4444">0–29</div><div class="verdict-row-desc">Beleid structureel gericht tegen het belang van de eigen bevolking.</div></div>
+        </div>
+        <div class="callout warning" style="margin-top:16px">
+          <strong>Noot over "Landverrader":</strong> Dit label volgt uitsluitend uit een berekende score op basis van aantoonbare feiten. Het is een mening gebaseerd op feiten, beschermd onder artikel 10 EVRM. Altijd vergezeld van onderbouwde toelichting per item.
+        </div>
       </div>
     </div>
 
-    <!-- SECTION 6 -->
     <div class="meth-section">
-      <div class="meth-section-title"><span class="meth-section-num">06</span>Beperkingen van deze methode</div>
-      <div class="meth-body">
-        <p>VolksRekening is transparant over wat de methode <em>niet</em> kan:</p>
-        <table class="meth-table">
-          <tr><th>Beperking</th><th>Toelichting</th></tr>
-          <tr><td class="label-cell">Niet alle beloften zijn gedocumenteerd</td><td>De dataset is representatief maar niet uitputtend. Ontbrekende items kunnen de score beïnvloeden.</td></tr>
-          <tr><td class="label-cell">Gelijke weging is een keuze</td><td>Elke belofte telt even zwaar. Een kleine belofte (lagere accijns) weegt even zwaar als een grote (woningtekort). Dit is een bewuste vereenvoudiging.</td></tr>
-          <tr><td class="label-cell">Impact is soms debateerbaar</td><td>Of een beleidsmaatregel "positief" of "negatief" is voor het volk, is bij grensgevallen een redactioneel oordeel. Wij onderbouwen dit altijd.</td></tr>
-          <tr><td class="label-cell">Oppositie vs. coalitie</td><td>Oppositiepolitici kunnen beloften minder nakomen simpelweg door gebrek aan coalitiemacht. Dit wordt meegewogen in de toelichting maar niet automatisch in de score.</td></tr>
-          <tr><td class="label-cell">Volksgevoel is geen waarheid</td><td>De volksgevoel-laag meet publieke perceptie, niet morele juistheid. Een meerderheid kan ongelijk hebben.</td></tr>
-        </table>
-      </div>
-    </div>
-
-    <!-- SECTION 7: JURIDISCH -->
-    <div class="meth-section">
-      <div class="meth-section-title"><span class="meth-section-num">07</span>Juridische positie</div>
+      <div class="meth-section-title"><span class="meth-section-num">05</span>Juridische positie</div>
       <div class="meth-body">
         <div class="callout legal">
-          <strong>VolksRekening is geen nieuwsmedium en geen rechter.</strong> Het is een opinie-analyse platform dat gebruikmaakt van het recht op vrije meningsuiting (artikel 10 EVRM en artikel 7 Grondwet). Alle oordelen zijn meningen gebaseerd op feiten, niet feitelijke beweringen op zichzelf.
+          <strong>VolksRekening is een opinie-analyse platform.</strong> Alle scores en verdicts zijn meningen gebaseerd op feiten, geen feitelijke beweringen op zichzelf. Beschermd onder artikel 10 EVRM en artikel 7 Grondwet. Voor publieke personen geldt verhoogde tolerantieplicht voor kritiek (EHRM, Lingens t. Oostenrijk, 1986).
         </div>
-        <p>Voor politici als publieke personen geldt in de Nederlandse en Europese rechtspraak een verhoogde tolerantieplicht voor kritiek. Dit is vaste jurisprudentie van het Europees Hof voor de Rechten van de Mens (o.a. Lingens t. Oostenrijk, 1986).</p>
-        <p>VolksRekening voldoet aan de volgende voorwaarden die de rechter meeneemt bij de beoordeling van uitlatingen over publieke personen:</p>
         <table class="meth-table">
           <tr><th>Criterium</th><th>Hoe VolksRekening hieraan voldoet</th></tr>
-          <tr><td class="label-cell">Feitelijke grondslag</td><td>Elke claim is onderbouwd met een toelichting en herleidbaar naar publieke bronnen.</td></tr>
-          <tr><td class="label-cell">Onderscheid feit vs. mening</td><td>Scores en verdicts zijn expliciet gelabeld als berekende oordelen, niet als feitelijke beweringen.</td></tr>
-          <tr><td class="label-cell">Transparante methode</td><td>De scoringsformule is volledig openbaar en reproduceerbaar (deze pagina).</td></tr>
-          <tr><td class="label-cell">Correctiemogelijkheid</td><td>Gegronde correcties worden verwerkt. Er is een contactmogelijkheid voor betrokkenen.</td></tr>
+          <tr><td class="label-cell">Feitelijke grondslag</td><td>Elke claim onderbouwd met toelichting en herleidbaar naar publieke bronnen.</td></tr>
+          <tr><td class="label-cell">Feit vs. mening</td><td>Scores en verdicts expliciet gelabeld als berekende oordelen.</td></tr>
+          <tr><td class="label-cell">Transparante methode</td><td>Scoringsformule volledig openbaar en reproduceerbaar.</td></tr>
+          <tr><td class="label-cell">Correctiemogelijkheid</td><td>Gegronde correcties worden verwerkt. Contactmogelijkheid voor betrokkenen.</td></tr>
           <tr><td class="label-cell">Publiek belang</td><td>Politieke verantwoording is een kernfunctie van de democratische rechtsstaat.</td></tr>
         </table>
-        <div class="callout warning" style="margin-top:16px">
-          <strong>Disclaimer:</strong> VolksRekening biedt geen juridisch advies. De informatie op dit platform is uitsluitend bedoeld ter informatie en opinievorming. Raadpleeg bij vragen over uw specifieke situatie een jurist.
-        </div>
-      </div>
-    </div>
-
-    <!-- SECTION 8 -->
-    <div class="meth-section">
-      <div class="meth-section-title"><span class="meth-section-num">08</span>Redactionele onafhankelijkheid</div>
-      <div class="meth-body">
-        <p>VolksRekening heeft geen politieke partijbinding en accepteert geen betaalde content, gesponsorde scores of advertenties die de redactionele inhoud beïnvloeden. De scores worden niet aangepast op verzoek van politici of partijen.</p>
-        <p>Het platform scoort politici van alle politieke stromingen op dezelfde criteria. Links en rechts, coalitie en oppositie — de methode is voor iedereen gelijk.</p>
       </div>
     </div>
 
     <div class="meth-footer">
       <p>VolksRekening — Politieke Verantwoordelijkheidsmonitor Nederland</p>
-      <p style="margin-top:6px">Vragen, correcties of aanvullingen? Stuur een bericht via <a href="#">contact@volksrekening.nl</a></p>
-      <p style="margin-top:6px; color:#1e3a5f">Versie 1.0 — Maart 2026</p>
+      <p style="margin-top:6px">Vragen of correcties? <a href="mailto:contact@volksrekening.nl" style="color:var(--text3)">contact@volksrekening.nl</a></p>
+      <p style="margin-top:6px;color:#1e3a5f">Versie 2.0 — Maart 2026</p>
     </div>
   </div>
 </div>
 
 <script>
-const VERDICTS = [
-  { min:80, label:"VOLKSHELD",    sub:"Heeft consequent in het belang van het volk gehandeld",           kleur:"#22c55e", bg:"#052e16", icon:"★" },
-  { min:60, label:"BETROUWBAAR",  sub:"Overwegend integer beleid met enige tekortkomingen",              kleur:"#86efac", bg:"#052e16", icon:"✓" },
-  { min:45, label:"WISSELVALLIG", sub:"Beleid kende zowel winst als verlies voor het volk",              kleur:"#f59e0b", bg:"#2d1a00", icon:"~" },
-  { min:30, label:"VERDACHT",     sub:"Meer eigenbelang dan volksbelang aanwijsbaar",                    kleur:"#f97316", bg:"#2d1000", icon:"!" },
-  { min:0,  label:"LANDVERRADER", sub:"Beleid structureel gericht tegen het belang van eigen bevolking", kleur:"#ef4444", bg:"#2d0707", icon:"✗" },
+const VERDICTS=[
+  {min:80,label:"VOLKSHELD",   sub:"Heeft consequent in het belang van het volk gehandeld",           kleur:"#22c55e",bg:"#052e16",icon:"★"},
+  {min:60,label:"BETROUWBAAR", sub:"Overwegend integer beleid met enige tekortkomingen",              kleur:"#86efac",bg:"#052e16",icon:"✓"},
+  {min:45,label:"WISSELVALLIG",sub:"Beleid kende zowel winst als verlies voor het volk",              kleur:"#f59e0b",bg:"#2d1a00",icon:"~"},
+  {min:30,label:"VERDACHT",    sub:"Meer eigenbelang dan volksbelang aanwijsbaar",                    kleur:"#f97316",bg:"#2d1000",icon:"!"},
+  {min:0, label:"LANDVERRADER",sub:"Beleid structureel gericht tegen het belang van eigen bevolking", kleur:"#ef4444",bg:"#2d0707",icon:"✗"},
 ];
-const STATUS = {
-  nagekomen:   { label:"Nagekomen",   kleur:"#22c55e", bg:"#052e16" },
-  gedeeltelijk:{ label:"Gedeeltelijk",kleur:"#f59e0b", bg:"#2d1a00" },
-  gebroken:    { label:"Gebroken",    kleur:"#ef4444", bg:"#2d0707" },
+const STATUS={
+  nagekomen:   {label:"Nagekomen",   kleur:"#22c55e",bg:"#052e16"},
+  gedeeltelijk:{label:"Gedeeltelijk",kleur:"#f59e0b",bg:"#2d1a00"},
+  gebroken:    {label:"Gebroken",    kleur:"#ef4444",bg:"#2d0707"},
 };
-const IMPACT = {
-  positief:{ label:"Pro-volk",             kleur:"#22c55e", icon:"↑" },
-  negatief:{ label:"Pro-corporatie/elite", kleur:"#ef4444", icon:"↓" },
-  gemengd: { label:"Gemengd",             kleur:"#f59e0b", icon:"~" },
+const IMPACT={
+  positief:{label:"Pro-volk",            kleur:"#22c55e",icon:"↑"},
+  negatief:{label:"Pro-corporatie/elite",kleur:"#ef4444",icon:"↓"},
+  gemengd: {label:"Gemengd",            kleur:"#f59e0b",icon:"~"},
 };
-const CAT_COLORS = {
+const CAT={
   Zorg:"#818cf8",Wonen:"#34d399",Klimaat:"#6ee7b7",Economie:"#fbbf24",
   Sociaal:"#f472b6",Democratie:"#60a5fa","Financiën":"#a78bfa",
   Veiligheid:"#fb923c",Werk:"#e879f9",Migratie:"#94a3b8",Onderwijs:"#67e8f9",
-  "Buitenland/IHL":"#a78bfa",
+  "Buitenland/IHL":"#a78bfa",Moties:"#34d399",
 };
 
-const POLITICIANS = [
+const POLITICIANS=[
   {
-    id:"rutte", naam:"Mark Rutte", partij:"VVD", periode:"2010–2023", rol:"Minister-President",
-    ihl:{ id:"ihl", belofte:"Naleving rechterlijke uitspraken inzake wapenexport naar Israël", categorie:"Buitenland/IHL", status:"gebroken", impact:"negatief", toelichting:"Het gerechtshof Den Haag verbood in februari 2024 de export van F-35-onderdelen naar Israël. Het kabinet-Rutte IV ging in hoger beroep en bleef exporteren in afwachting. Dit is een directe schending van een rechterlijk bevel.", jaar:2024, type:"ihl" },
-    vg:{ id:"vg", belofte:"Positie Israël-Palestina conflict: volksgevoel", categorie:"Buitenland/IHL", status:"gebroken", impact:"negatief", toelichting:"Rutte nam consequent een pro-Israël positie in, ook na het rechterlijk verbod. Peilingen (2023-2024) geven aan dat een meerderheid van de Nederlanders zich kritischer had moeten opstellen.", jaar:2024, type:"vg" },
+    id:"rutte",naam:"Mark Rutte",partij:"VVD",periode:"2010–2023",rol:"Minister-President",
+    ihl:{id:"ihl",belofte:"Naleving rechterlijk verbod op wapenexport naar Israël",categorie:"Buitenland/IHL",status:"gebroken",impact:"negatief",toelichting:"Gerechtshof Den Haag verbood F-35-export februari 2024. Kabinet-Rutte IV ging in hoger beroep en bleef exporteren. Directe schending van een rechterlijk bevel.",jaar:2024,type:"ihl"},
+    vg:{id:"vg",belofte:"Positie Israël-Palestina: volksgevoel",categorie:"Buitenland/IHL",status:"gebroken",impact:"negatief",toelichting:"Rutte nam consequent pro-Israël positie in ook na rechterlijk verbod. Peilingen (2023-2024) tonen dat meerderheid Nederlanders zich kritischer had moeten opstellen.",jaar:2024,type:"vg"},
+    mot:{id:"mot",belofte:"Motiegedrag volksbelang",categorie:"Moties",status:"gebroken",impact:"negatief",toelichting:"Stemde als fractieleider consequent tegen moties voor hogere minimumloon (2012-2013), tegen moties voor verhoging zorgtoeslag, en tegen moties die bezuinigingen op thuiszorg wilden terugdraaien. Diende zelf moties in voor liberalisering arbeidsmarkt ten koste van werknemers.",jaar:2020,type:"mot"},
     beloftes:[
       {id:1,belofte:"Geen bezuinigingen op zorg",categorie:"Zorg",status:"gebroken",impact:"negatief",toelichting:"Miljardenbezuinigingen in thuiszorg (Rutte II). Tienduizenden thuiszorgmedewerkers verloren hun baan.",jaar:2012},
       {id:2,belofte:"Hypotheekrenteaftrek niet aanpakken",categorie:"Wonen",status:"gebroken",impact:"gemengd",toelichting:"Hypotheekrenteaftrek werd toch afgebouwd, al was dit structureel wenselijker op lange termijn.",jaar:2012},
@@ -471,247 +393,301 @@ const POLITICIANS = [
       {id:9,belofte:"Betaalbare gezondheidszorg",categorie:"Zorg",status:"gedeeltelijk",impact:"negatief",toelichting:"Eigen risico verhoogd van €150 naar €385. Marktwerking in zorg uitgebreid ten koste van patiënten.",jaar:2022},
       {id:10,belofte:"Aanpak georganiseerde criminaliteit",categorie:"Veiligheid",status:"gedeeltelijk",impact:"positief",toelichting:"Bibob-wet aangescherpt, extra middelen voor politie. Ondermijning bleef toenemen door bezuinigingen justitie.",jaar:2019},
       {id:11,belofte:"Flexwerk terugdringen",categorie:"Werk",status:"gebroken",impact:"negatief",toelichting:"Flexwerk en ZZP-constructies namen sterk toe. Wet DBA (2016) mislukte en werd jarenlang niet gehandhaafd.",jaar:2022},
-      {id:12,belofte:"Eerlijke inkomenspolitiek",categorie:"Sociaal",status:"gedeeltelijk",impact:"gemengd",toelichting:"Minimumloon verhoogd, maar vermogensongelijkheid groeide sterk. Top 10% verrijkte zich significant sneller.",jaar:2022},
+      {id:12,belofte:"Eerlijke inkomenspolitiek",categorie:"Sociaal",status:"gedeeltelijk",impact:"gemengd",toelichting:"Minimumloon verhoogd, maar vermogensongelijkheid groeide sterk.",jaar:2022},
     ]
   },
   {
-    id:"klaver", naam:"Jesse Klaver", partij:"GroenLinks", periode:"2015–heden", rol:"Fractievoorzitter / Lijsttrekker",
-    ihl:{ id:"ihl", belofte:"Naleving internationaal humanitair recht inzake Israël/Gaza", categorie:"Buitenland/IHL", status:"nagekomen", impact:"positief", toelichting:"Klaver pleitte consequent voor naleving van het internationaal humanitair recht en steunde de rechterlijke uitspraak die wapenexport verbood.", jaar:2024, type:"ihl" },
-    vg:{ id:"vg", belofte:"Positie Israël-Palestina conflict: volksgevoel", categorie:"Buitenland/IHL", status:"nagekomen", impact:"positief", toelichting:"Klaver nam een duidelijk kritische positie in tegenover Israëls optreden in Gaza, in lijn met peilingen als meerderheidsoordeel Nederlandse bevolking (2023-2024).", jaar:2024, type:"vg" },
+    id:"klaver",naam:"Jesse Klaver",partij:"GroenLinks",periode:"2015–heden",rol:"Fractievoorzitter / Lijsttrekker",
+    ihl:{id:"ihl",belofte:"Naleving internationaal humanitair recht inzake Israël/Gaza",categorie:"Buitenland/IHL",status:"nagekomen",impact:"positief",toelichting:"Klaver pleitte consequent voor naleving IHL en steunde rechterlijke uitspraak die wapenexport verbood. Vroeg om wapenembargo en erkende ICJ-uitspraken.",jaar:2024,type:"ihl"},
+    vg:{id:"vg",belofte:"Positie Israël-Palestina: volksgevoel",categorie:"Buitenland/IHL",status:"nagekomen",impact:"positief",toelichting:"Duidelijk kritische positie tegenover Israëls optreden in Gaza, in lijn met meerderheidsoordeel Nederlandse bevolking (peilingen 2023-2024).",jaar:2024,type:"vg"},
+    mot:{id:"mot",belofte:"Motiegedrag volksbelang",categorie:"Moties",status:"nagekomen",impact:"positief",toelichting:"Diende moties in voor hogere minimumloon (aangenomen 2021-2022), aanpak energiearmoede, stop op beleggers in woningmarkt en betaalbare kinderopvang. Stemde consequent voor sociale beschermingsmoties.",jaar:2022,type:"mot"},
     beloftes:[
-      {id:1,belofte:"Ambitieus klimaatbeleid doorvoeren",categorie:"Klimaat",status:"gedeeltelijk",impact:"positief",toelichting:"In oppositie altijd voor strenger klimaatbeleid gepleit. Als coalitiepartner (2024) klimaatambities deels ingeleverd.",jaar:2024},
-      {id:2,belofte:"Woningcrisis aanpakken via overheid",categorie:"Wonen",status:"gedeeltelijk",impact:"positief",toelichting:"Pleit consequent voor meer sociale huurwoningen en aanpak beleggers. Beperkt succes als oppositiepartij.",jaar:2023},
+      {id:1,belofte:"Ambitieus klimaatbeleid doorvoeren",categorie:"Klimaat",status:"gedeeltelijk",impact:"positief",toelichting:"In oppositie altijd voor strenger klimaatbeleid. Als coalitiepartner (2024) ambities deels ingeleverd.",jaar:2024},
+      {id:2,belofte:"Woningcrisis aanpakken via overheid",categorie:"Wonen",status:"gedeeltelijk",impact:"positief",toelichting:"Pleit consequent voor meer sociale huurwoningen. Beperkt succes als oppositiepartij.",jaar:2023},
       {id:3,belofte:"Vermogensbelasting voor rijksten",categorie:"Financiën",status:"gebroken",impact:"positief",toelichting:"Herhaaldelijk bepleit maar nooit gerealiseerd door gebrek aan coalitiemacht.",jaar:2021},
       {id:4,belofte:"Fusie met PvdA transparant doorvoeren",categorie:"Democratie",status:"nagekomen",impact:"gemengd",toelichting:"Fusie GL-PvdA in 2023 doorgezet met ledenvergadering. Democratisch proces gevolgd.",jaar:2023},
       {id:5,belofte:"Basisinkomen onderzoeken en pilots starten",categorie:"Sociaal",status:"gedeeltelijk",impact:"positief",toelichting:"Pilots basisinkomen in enkele gemeenten gesteund. Landelijke invoering niet gerealiseerd.",jaar:2022},
       {id:6,belofte:"Asielbeleid humaan houden",categorie:"Migratie",status:"gebroken",impact:"gemengd",toelichting:"Als coalitiepartner (2024) ingestemd met strenger asielbeleid, haaks op eerdere standpunten.",jaar:2024},
       {id:7,belofte:"Multinationals eerlijk laten betalen",categorie:"Financiën",status:"gedeeltelijk",impact:"positief",toelichting:"Consequent gepleit voor eerlijker belasting. Als oppositiepartij beperkte doorwerking.",jaar:2022},
-      {id:8,belofte:"Kinderarmoede aanpakken",categorie:"Sociaal",status:"gedeeltelijk",impact:"positief",toelichting:"Diverse moties ingediend en aangenomen. Structurele aanpak bleef uit door afhankelijkheid van coalitie.",jaar:2022},
+      {id:8,belofte:"Kinderarmoede aanpakken",categorie:"Sociaal",status:"gedeeltelijk",impact:"positief",toelichting:"Diverse moties ingediend en aangenomen. Structurele aanpak bleef uit.",jaar:2022},
     ]
   },
   {
-    id:"jetten", naam:"Rob Jetten", partij:"D66", periode:"2017–heden", rol:"Minister Klimaat & Energie",
-    ihl:{ id:"ihl", belofte:"Naleving rechterlijke uitspraken inzake wapenexport", categorie:"Buitenland/IHL", status:"gedeeltelijk", impact:"gemengd", toelichting:"Jetten was minister in het kabinet dat hoger beroep aantekende. D66 uitte intern kritiek maar bleef deel van het kabinet. Wisselende positie.", jaar:2024, type:"ihl" },
-    vg:{ id:"vg", belofte:"Positie Israël-Palestina conflict: volksgevoel", categorie:"Buitenland/IHL", status:"gedeeltelijk", impact:"gemengd", toelichting:"D66 nam een genuanceerder standpunt in dan VVD/PVV maar steunde als coalitiepartner indirect het beleid. Positie als onvoldoende kritisch ervaren door deel van de achterban.", jaar:2024, type:"vg" },
+    id:"jetten",naam:"Rob Jetten",partij:"D66",periode:"2017–heden",rol:"Minister Klimaat & Energie",
+    ihl:{id:"ihl",belofte:"Naleving rechterlijke uitspraken inzake wapenexport",categorie:"Buitenland/IHL",status:"gedeeltelijk",impact:"gemengd",toelichting:"Jetten was minister in kabinet dat hoger beroep aantekende. D66 uitte intern kritiek maar bleef deel van het kabinet. Wisselende positie.",jaar:2024,type:"ihl"},
+    vg:{id:"vg",belofte:"Positie Israël-Palestina: volksgevoel",categorie:"Buitenland/IHL",status:"gedeeltelijk",impact:"gemengd",toelichting:"D66 nam genuanceerder standpunt in dan VVD/PVV maar steunde als coalitiepartner indirect het beleid.",jaar:2024,type:"vg"},
+    mot:{id:"mot",belofte:"Motiegedrag volksbelang",categorie:"Moties",status:"gedeeltelijk",impact:"positief",toelichting:"Diende moties in voor versnelling energietransitie en compensatie energiearmoede. Stemde echter ook voor moties die marktwerking in energie bevorderden ten koste van consumenten. Wisselend beeld.",jaar:2023,type:"mot"},
     beloftes:[
       {id:1,belofte:"Groningen gaswinning snel afbouwen",categorie:"Klimaat",status:"nagekomen",impact:"positief",toelichting:"Gaswinning Groningen beëindigd per 2024. Historische beslissing ten gunste van Groningers.",jaar:2023},
-      {id:2,belofte:"Energietransitie versnellen",categorie:"Klimaat",status:"gedeeltelijk",impact:"positief",toelichting:"Ambitieuze doelen gesteld, maar uitvoering vertraagd door stikstof, vergunningen en netcongestie.",jaar:2023},
+      {id:2,belofte:"Energietransitie versnellen",categorie:"Klimaat",status:"gedeeltelijk",impact:"positief",toelichting:"Ambitieuze doelen gesteld, maar uitvoering vertraagd door stikstof en netcongestie.",jaar:2023},
       {id:3,belofte:"Energieprijzen beheersbaar houden",categorie:"Economie",status:"gedeeltelijk",impact:"positief",toelichting:"Prijsplafond ingevoerd (2023) maar tijdelijk en beperkt. Structurele aanpak ontbrak.",jaar:2023},
       {id:4,belofte:"D66 zou nooit met PVV regeren",categorie:"Democratie",status:"nagekomen",impact:"gemengd",toelichting:"D66 is niet in de coalitie gestapt met PVV in 2024. Belofte gehouden.",jaar:2024},
       {id:5,belofte:"Referendum terugbrengen",categorie:"Democratie",status:"gebroken",impact:"negatief",toelichting:"D66 kernbelofte al jaren. Ondanks diverse coalities nooit gerealiseerd.",jaar:2022},
       {id:6,belofte:"Onderwijs structureel verbeteren",categorie:"Onderwijs",status:"gedeeltelijk",impact:"positief",toelichting:"Extra investeringen, aanpak lerarentekort geprobeerd. Fundamentele problemen onopgelost.",jaar:2022},
-      {id:7,belofte:"Netcongestie aanpakken",categorie:"Klimaat",status:"gebroken",impact:"negatief",toelichting:"Energienet volledig vastgelopen onder zijn ministerschap. Bedrijven en zonne-energie-eigenaren konden niet aansluiten.",jaar:2024},
+      {id:7,belofte:"Netcongestie aanpakken",categorie:"Klimaat",status:"gebroken",impact:"negatief",toelichting:"Energienet volledig vastgelopen onder zijn ministerschap.",jaar:2024},
     ]
   },
   {
-    id:"timmermans", naam:"Frans Timmermans", partij:"PvdA/GL-PvdA", periode:"2012–heden", rol:"Eurocommissaris / Lijsttrekker",
-    ihl:{ id:"ihl", belofte:"Naleving internationaal humanitair recht en ICJ-uitspraken", categorie:"Buitenland/IHL", status:"nagekomen", impact:"positief", toelichting:"Timmermans heeft consequent gepleit voor naleving van het internationaal recht, steun voor het ICJ-proces en kritiek geuit op collectieve bestraffing van Palestijnse burgers.", jaar:2024, type:"ihl" },
-    vg:{ id:"vg", belofte:"Positie Israël-Palestina conflict: volksgevoel", categorie:"Buitenland/IHL", status:"nagekomen", impact:"positief", toelichting:"Timmermans nam een duidelijk kritische positie die aansluit bij het meerderheidsoordeel van de Nederlandse bevolking (peilingen 2023-2024). Hij sprak zich uit voor een staakt-het-vuren.", jaar:2024, type:"vg" },
+    id:"timmermans",naam:"Frans Timmermans",partij:"PvdA/GL-PvdA",periode:"2012–heden",rol:"Eurocommissaris / Lijsttrekker",
+    ihl:{id:"ihl",belofte:"Naleving internationaal humanitair recht en ICJ-uitspraken",categorie:"Buitenland/IHL",status:"nagekomen",impact:"positief",toelichting:"Consequent gepleit voor naleving IHL, steun voor ICJ-proces en kritiek op collectieve bestraffing Palestijnse burgers.",jaar:2024,type:"ihl"},
+    vg:{id:"vg",belofte:"Positie Israël-Palestina: volksgevoel",categorie:"Buitenland/IHL",status:"nagekomen",impact:"positief",toelichting:"Duidelijk kritische positie, aansluitend bij meerderheidsoordeel Nederlandse bevolking (peilingen 2023-2024). Pleitte voor staakt-het-vuren.",jaar:2024,type:"vg"},
+    mot:{id:"mot",belofte:"Motiegedrag volksbelang",categorie:"Moties",status:"gedeeltelijk",impact:"positief",toelichting:"Als Kamerlid voor en na Eurocommissariaat diende hij moties in voor eerlijker belastingbeleid en sociale bescherming. Als Eurocommissaris geen stemrecht in NL Kamer maar agendeerde volksbelang-wetgeving in EU.",jaar:2022,type:"mot"},
     beloftes:[
-      {id:1,belofte:"Europese Green Deal doorvoeren",categorie:"Klimaat",status:"gedeeltelijk",impact:"positief",toelichting:"Green Deal gelanceerd als ambitieus raamwerk. Uitvoering vertraagd door boerenprotesten en rechtse tegenwind.",jaar:2023},
+      {id:1,belofte:"Europese Green Deal doorvoeren",categorie:"Klimaat",status:"gedeeltelijk",impact:"positief",toelichting:"Green Deal gelanceerd als ambitieus raamwerk. Uitvoering vertraagd door boerenprotesten.",jaar:2023},
       {id:2,belofte:"Europese sociale rechten versterken",categorie:"Sociaal",status:"gedeeltelijk",impact:"positief",toelichting:"Europese Pijler Sociale Rechten gepromoot. Implementatie wisselend per lidstaat.",jaar:2021},
       {id:3,belofte:"Strenger optreden tegen corruptie in EU",categorie:"Democratie",status:"gedeeltelijk",impact:"positief",toelichting:"Artikel 7-procedures gestart (Polen, Hongarije). Beperkt effectief door unanimiteitsregel.",jaar:2020},
-      {id:4,belofte:"Pesticidegebruik halveren",categorie:"Klimaat",status:"gebroken",impact:"gemengd",toelichting:"Voorstel ingetrokken na massale tegenstand van boeren en rechtse partijen in Europees Parlement.",jaar:2024},
-      {id:5,belofte:"Terugkeer naar Nederlandse politiek voor het volk",categorie:"Democratie",status:"gedeeltelijk",impact:"positief",toelichting:"Teruggekeerd voor verkiezingen 2023, maar verloor van Wilders. Constructieve oppositiepolitiek gevoerd.",jaar:2024},
+      {id:4,belofte:"Pesticidegebruik halveren",categorie:"Klimaat",status:"gebroken",impact:"gemengd",toelichting:"Voorstel ingetrokken na massale tegenstand boeren en rechtse partijen.",jaar:2024},
+      {id:5,belofte:"Terugkeer naar Nederlandse politiek",categorie:"Democratie",status:"gedeeltelijk",impact:"positief",toelichting:"Teruggekeerd voor verkiezingen 2023, maar verloor van Wilders.",jaar:2024},
       {id:6,belofte:"Eerlijker belastingbeleid in Europa",categorie:"Financiën",status:"gedeeltelijk",impact:"positief",toelichting:"Minimumbelasting multinationals (15%) mede bereikt. Structurele belastingparadijzen blijven bestaan.",jaar:2021},
     ]
   },
   {
-    id:"dejong", naam:"Hugo de Jonge", partij:"CDA", periode:"2017–heden", rol:"Minister VWS / Volkshuisvesting",
-    ihl:{ id:"ihl", belofte:"Naleving rechterlijke uitspraken inzake wapenexport", categorie:"Buitenland/IHL", status:"gedeeltelijk", impact:"gemengd", toelichting:"De Jonge heeft zich niet publiek uitgesproken tegen de wapenexport na het rechterlijk verbod en profileerde zich hier niet op.", jaar:2024, type:"ihl" },
-    vg:{ id:"vg", belofte:"Positie Israël-Palestina conflict: volksgevoel", categorie:"Buitenland/IHL", status:"gedeeltelijk", impact:"gemengd", toelichting:"De Jonge deed weinig expliciete uitspraken over het conflict. CDA neemt traditioneel een pro-Israël positie in, maar De Jonge profileerde zich hier niet sterk op.", jaar:2024, type:"vg" },
+    id:"dejong",naam:"Hugo de Jonge",partij:"CDA",periode:"2017–heden",rol:"Minister VWS / Volkshuisvesting",
+    ihl:{id:"ihl",belofte:"Naleving rechterlijke uitspraken inzake wapenexport",categorie:"Buitenland/IHL",status:"gedeeltelijk",impact:"gemengd",toelichting:"De Jonge heeft zich niet publiek uitgesproken tegen de wapenexport na het rechterlijk verbod en profileerde zich hier niet op.",jaar:2024,type:"ihl"},
+    vg:{id:"vg",belofte:"Positie Israël-Palestina: volksgevoel",categorie:"Buitenland/IHL",status:"gedeeltelijk",impact:"gemengd",toelichting:"De Jonge deed weinig expliciete uitspraken over het conflict. CDA neemt traditioneel pro-Israël positie in maar De Jonge profileerde zich hier niet sterk op.",jaar:2024,type:"vg"},
+    mot:{id:"mot",belofte:"Motiegedrag volksbelang",categorie:"Moties",status:"gedeeltelijk",impact:"gemengd",toelichting:"Diende als minister moties in voor woningbouw (positief). Stemde als CDA-Kamerlid eerder tegen moties die marktwerking in zorg wilden beperken. Wisselend beeld per beleidsterrein.",jaar:2023,type:"mot"},
     beloftes:[
       {id:1,belofte:"Zorg betaalbaar en toegankelijk houden",categorie:"Zorg",status:"gedeeltelijk",impact:"negatief",toelichting:"Wachttijden GGZ en ouderenzorg namen toe. Marktwerking bleef domineren.",jaar:2021},
       {id:2,belofte:"Coronacrisis beheerst managen",categorie:"Zorg",status:"gedeeltelijk",impact:"gemengd",toelichting:"Vaccinatiecampagne succesvol, maar mondkapjesdeal-affaire en avondklok-communicatie zorgden voor vertrouwensschade.",jaar:2021},
-      {id:3,belofte:"900.000 nieuwe woningen bouwen voor 2030",categorie:"Wonen",status:"gedeeltelijk",impact:"positief",toelichting:"Ambitieuze doelstelling gezet. Uitvoering loopt ver achter door stikstof, netcongestie en gebrek aan bouwvakkers.",jaar:2024},
-      {id:4,belofte:"Woningcorporaties meer ruimte geven",categorie:"Wonen",status:"nagekomen",impact:"positief",toelichting:"Verhuurderheffing afgeschaft (2023), waardoor corporaties weer konden investeren in sociale huur.",jaar:2023},
-      {id:5,belofte:"Beleggers uit woningmarkt weren",categorie:"Wonen",status:"gedeeltelijk",impact:"positief",toelichting:"Opkoopbescherming ingevoerd in veel gemeenten. Beleggers omzeilen regels via andere constructies.",jaar:2023},
+      {id:3,belofte:"900.000 nieuwe woningen bouwen voor 2030",categorie:"Wonen",status:"gedeeltelijk",impact:"positief",toelichting:"Ambitieuze doelstelling gezet. Uitvoering loopt ver achter.",jaar:2024},
+      {id:4,belofte:"Woningcorporaties meer ruimte geven",categorie:"Wonen",status:"nagekomen",impact:"positief",toelichting:"Verhuurderheffing afgeschaft (2023). Corporaties konden weer investeren in sociale huur.",jaar:2023},
+      {id:5,belofte:"Beleggers uit woningmarkt weren",categorie:"Wonen",status:"gedeeltelijk",impact:"positief",toelichting:"Opkoopbescherming ingevoerd. Beleggers omzeilen regels via andere constructies.",jaar:2023},
       {id:6,belofte:"Ouderenzorg menswaardiger maken",categorie:"Zorg",status:"gebroken",impact:"negatief",toelichting:"Personeelstekort in verpleeghuizen verergerd. Thuiszorgbezuinigingen niet teruggedraaid.",jaar:2022},
       {id:7,belofte:"Geestelijke gezondheidszorg versterken",categorie:"Zorg",status:"gebroken",impact:"negatief",toelichting:"GGZ-wachttijden bereikten recordhoogtes. Structurele hervormingen bleven uit.",jaar:2022},
     ]
   },
   {
-    id:"omtzigt", naam:"Pieter Omtzigt", partij:"NSC", periode:"2003–heden", rol:"Kamerlid / Lijsttrekker NSC",
-    ihl:{ id:"ihl", belofte:"Naleving internationaal recht en onafhankelijke rechtspraak", categorie:"Buitenland/IHL", status:"nagekomen", impact:"positief", toelichting:"Omtzigt sprak zich expliciet uit voor naleving van rechterlijke uitspraken en steunde het standpunt dat de wapenexport na het gerechtshof-verbod direct gestopt had moeten worden.", jaar:2024, type:"ihl" },
-    vg:{ id:"vg", belofte:"Positie Israël-Palestina conflict: volksgevoel", categorie:"Buitenland/IHL", status:"gedeeltelijk", impact:"gemengd", toelichting:"Omtzigt nam een genuanceerde positie in: hij erkende het recht op zelfverdediging maar pleitte ook voor bescherming van Palestijnse burgers. Wisselend ontvangen.", jaar:2024, type:"vg" },
+    id:"omtzigt",naam:"Pieter Omtzigt",partij:"NSC",periode:"2003–heden",rol:"Kamerlid / Lijsttrekker NSC",
+    ihl:{id:"ihl",belofte:"Naleving internationaal recht en onafhankelijke rechtspraak",categorie:"Buitenland/IHL",status:"nagekomen",impact:"positief",toelichting:"Omtzigt sprak zich expliciet uit voor naleving rechterlijke uitspraken en steunde standpunt dat wapenexport na het gerechtshof-verbod direct gestopt had moeten worden.",jaar:2024,type:"ihl"},
+    vg:{id:"vg",belofte:"Positie Israël-Palestina: volksgevoel",categorie:"Buitenland/IHL",status:"gedeeltelijk",impact:"gemengd",toelichting:"Genuanceerde positie: erkende recht op zelfverdediging maar pleitte ook voor bescherming Palestijnse burgers. Wisselend ontvangen.",jaar:2024,type:"vg"},
+    mot:{id:"mot",belofte:"Motiegedrag volksbelang",categorie:"Moties",status:"nagekomen",impact:"positief",toelichting:"Diende cruciale moties in die toeslagenaffaire op de agenda zetten. Moties voor parlementaire controle, transparantie en rechtsbescherming burgers — merendeels aangenomen door brede steun. Zijn motiewerk wordt beschouwd als een van de meest impactvolle in recente parlementaire geschiedenis.",jaar:2022,type:"mot"},
     beloftes:[
-      {id:1,belofte:"Toeslagenaffaire blootleggen en aanpakken",categorie:"Democratie",status:"nagekomen",impact:"positief",toelichting:"Omtzigt heeft persoonlijk de toeslagenaffaire blootgelegd via jarenlang onderzoek en Kamervragen. Historische bijdrage.",jaar:2021},
-      {id:2,belofte:"Transparantie en controlefunctie parlement herstellen",categorie:"Democratie",status:"nagekomen",impact:"positief",toelichting:"Onvermoeibaar gevochten voor parlementaire controle, WOB-verzoeken en verantwoording van bewindslieden.",jaar:2023},
-      {id:3,belofte:"Geen samenwerking met PVV/Wilders",categorie:"Democratie",status:"gebroken",impact:"gemengd",toelichting:"NSC aanvankelijk in coalitieonderhandeling gegaan met PVV, maar uiteindelijk uitgestapt. Verwarring over standpunt.",jaar:2024},
-      {id:4,belofte:"Bestaanszekerheid centraal stellen",categorie:"Sociaal",status:"gedeeltelijk",impact:"positief",toelichting:"Bestaanszekerheid als kernthema NSC. Als oppositiepartij beperkte directe impact gerealiseerd.",jaar:2024},
+      {id:1,belofte:"Toeslagenaffaire blootleggen en aanpakken",categorie:"Democratie",status:"nagekomen",impact:"positief",toelichting:"Omtzigt heeft persoonlijk de toeslagenaffaire blootgelegd. Historische bijdrage.",jaar:2021},
+      {id:2,belofte:"Transparantie en controlefunctie parlement herstellen",categorie:"Democratie",status:"nagekomen",impact:"positief",toelichting:"Onvermoeibaar gevochten voor parlementaire controle en WOB-verzoeken.",jaar:2023},
+      {id:3,belofte:"Geen samenwerking met PVV/Wilders",categorie:"Democratie",status:"gebroken",impact:"gemengd",toelichting:"NSC aanvankelijk in coalitieonderhandeling gegaan met PVV maar uiteindelijk uitgestapt.",jaar:2024},
+      {id:4,belofte:"Bestaanszekerheid centraal stellen",categorie:"Sociaal",status:"gedeeltelijk",impact:"positief",toelichting:"Kernthema NSC. Als oppositiepartij beperkte directe impact.",jaar:2024},
       {id:5,belofte:"Belastingstelsel eerlijker maken",categorie:"Financiën",status:"gedeeltelijk",impact:"positief",toelichting:"Diverse voorstellen gedaan. Als kleine oppositiepartij beperkte doorwerking.",jaar:2024},
-      {id:6,belofte:"Pensioenhervorming kritisch beoordelen",categorie:"Sociaal",status:"nagekomen",impact:"positief",toelichting:"Omtzigt was een van de scherpste critici van het nieuwe pensioenstelsel en heeft technische bezwaren goed onderbouwd.",jaar:2023},
-      {id:7,belofte:"Integriteit boven carrière stellen",categorie:"Democratie",status:"nagekomen",impact:"positief",toelichting:"Heeft meermaals zijn positie geriskeerd (Rutte-memo, vertrek CDA) ten gunste van integriteit. Daad bij woord.",jaar:2022},
+      {id:6,belofte:"Pensioenhervorming kritisch beoordelen",categorie:"Sociaal",status:"nagekomen",impact:"positief",toelichting:"Een van de scherpste critici van het nieuwe pensioenstelsel met goed onderbouwde bezwaren.",jaar:2023},
+      {id:7,belofte:"Integriteit boven carrière stellen",categorie:"Democratie",status:"nagekomen",impact:"positief",toelichting:"Heeft meermaals zijn positie geriskeerd (Rutte-memo, vertrek CDA) ten gunste van integriteit.",jaar:2022},
     ]
   },
   {
-    id:"wilders", naam:"Geert Wilders", partij:"PVV", periode:"1998–heden", rol:"Partijleider / Informateur 2024",
-    ihl:{ id:"ihl", belofte:"Naleving rechterlijke uitspraken inzake wapenexport naar Israël", categorie:"Buitenland/IHL", status:"gebroken", impact:"negatief", toelichting:"Wilders steunde actief de wapenexport naar Israël en verzette zich openlijk tegen het rechterlijk verbod. Hij noemde de rechterlijke uitspraak een aanslag op de democratie — directe ondermijning van de rechtsstaat.", jaar:2024, type:"ihl" },
-    vg:{ id:"vg", belofte:"Positie Israël-Palestina conflict: volksgevoel", categorie:"Buitenland/IHL", status:"gebroken", impact:"negatief", toelichting:"Wilders neemt de meest uitgesproken pro-Israël positie van alle Nederlandse politici. Peilingen geven aan dat dit haaks staat op het meerderheidsoordeel van de Nederlandse bevolking over Israëls militaire optreden in Gaza.", jaar:2024, type:"vg" },
+    id:"wilders",naam:"Geert Wilders",partij:"PVV",periode:"1998–heden",rol:"Partijleider / Informateur 2024",
+    ihl:{id:"ihl",belofte:"Naleving rechterlijke uitspraken inzake wapenexport naar Israël",categorie:"Buitenland/IHL",status:"gebroken",impact:"negatief",toelichting:"Wilders steunde actief de wapenexport en verzette zich openlijk tegen het rechterlijk verbod. Noemde de rechterlijke uitspraak een aanslag op de democratie. Directe ondermijning van de rechtsstaat.",jaar:2024,type:"ihl"},
+    vg:{id:"vg",belofte:"Positie Israël-Palestina: volksgevoel",categorie:"Buitenland/IHL",status:"gebroken",impact:"negatief",toelichting:"Meest uitgesproken pro-Israël positie van alle Nederlandse politici. Peilingen geven aan dat dit haaks staat op meerderheidsoordeel Nederlandse bevolking over Israëls militaire optreden.",jaar:2024,type:"vg"},
+    mot:{id:"mot",belofte:"Motiegedrag volksbelang",categorie:"Moties",status:"gedeeltelijk",impact:"gemengd",toelichting:"Diende moties in voor lagere energierekening en AOW-bescherming (positief voor volk). Stemde echter ook tegen moties voor betaalbare huur, aanpak belastingontwijking en klimaatmaatregelen. Populistische selectiviteit: volksbelang alleen waar het electoraal uitkomt.",jaar:2023,type:"mot"},
     beloftes:[
-      {id:1,belofte:"Islam en Koran verbieden",categorie:"Democratie",status:"gebroken",impact:"negatief",toelichting:"Nooit gerealiseerd en grondwettelijk onmogelijk. Wordt structureel als verkiezingsbelofte gebruikt zonder uitvoerbaarheid.",jaar:2023},
-      {id:2,belofte:"Massa-immigratie stoppen",categorie:"Migratie",status:"gedeeltelijk",impact:"gemengd",toelichting:"Als premier-informateur asielwet aangescherpt. Fundamentele immigratiestop niet gerealiseerd; EU staat dit niet toe.",jaar:2024},
-      {id:3,belofte:"Koopkracht gewone Nederlander verbeteren",categorie:"Economie",status:"gedeeltelijk",impact:"positief",toelichting:"Koopkrachtmaatregelen bepleit. Als coalitiepartner beperkte concrete winst geboekt voor lagere inkomens.",jaar:2024},
-      {id:4,belofte:"Nederland uit EU halen (Nexit)",categorie:"Democratie",status:"gebroken",impact:"gemengd",toelichting:"Nexit-belofte stilletjes begraven na coalitieonderhandeling. Blijft lid EU-systeem zonder fundamentele wijziging.",jaar:2024},
-      {id:5,belofte:"Zorgpremie omlaag",categorie:"Zorg",status:"gebroken",impact:"positief",toelichting:"Zorgpremie bleef stijgen ook onder kabinet-Schoof. Belofte aan achterban niet nagekomen.",jaar:2024},
-      {id:6,belofte:"Geen bezuinigingen op AOW en pensioenen",categorie:"Sociaal",status:"gedeeltelijk",impact:"positief",toelichting:"AOW niet aangetast, maar koopkracht ouderen staat onder druk door inflatie en stijgende zorgkosten.",jaar:2024},
-      {id:7,belofte:"Lagere benzineaccijns",categorie:"Economie",status:"gebroken",impact:"gemengd",toelichting:"Accijns tijdelijk verlaagd in coronatijd maar niet structureel. Belofte niet nagekomen.",jaar:2023},
-      {id:8,belofte:"Minder geld naar ontwikkelingshulp",categorie:"Financiën",status:"nagekomen",impact:"gemengd",toelichting:"Ontwikkelingshulpbudget fors gekort in coalitieakkoord 2024. Belofte nagekomen, impact omstreden.",jaar:2024},
+      {id:1,belofte:"Islam en Koran verbieden",categorie:"Democratie",status:"gebroken",impact:"negatief",toelichting:"Nooit gerealiseerd en grondwettelijk onmogelijk. Structureel gebruikt als verkiezingsbelofte.",jaar:2023},
+      {id:2,belofte:"Massa-immigratie stoppen",categorie:"Migratie",status:"gedeeltelijk",impact:"gemengd",toelichting:"Als informateur asielwet aangescherpt. Fundamentele immigratiestop niet gerealiseerd.",jaar:2024},
+      {id:3,belofte:"Koopkracht gewone Nederlander verbeteren",categorie:"Economie",status:"gedeeltelijk",impact:"positief",toelichting:"Koopkrachtmaatregelen bepleit. Als coalitiepartner beperkte concrete winst geboekt.",jaar:2024},
+      {id:4,belofte:"Nederland uit EU halen (Nexit)",categorie:"Democratie",status:"gebroken",impact:"gemengd",toelichting:"Nexit-belofte stilletjes begraven na coalitieonderhandeling.",jaar:2024},
+      {id:5,belofte:"Zorgpremie omlaag",categorie:"Zorg",status:"gebroken",impact:"positief",toelichting:"Zorgpremie bleef stijgen ook onder kabinet-Schoof.",jaar:2024},
+      {id:6,belofte:"Geen bezuinigingen op AOW en pensioenen",categorie:"Sociaal",status:"gedeeltelijk",impact:"positief",toelichting:"AOW niet aangetast, maar koopkracht ouderen staat onder druk.",jaar:2024},
+      {id:7,belofte:"Lagere benzineaccijns",categorie:"Economie",status:"gebroken",impact:"gemengd",toelichting:"Accijns tijdelijk verlaagd in coronatijd maar niet structureel.",jaar:2023},
+      {id:8,belofte:"Minder geld naar ontwikkelingshulp",categorie:"Financiën",status:"nagekomen",impact:"gemengd",toelichting:"Ontwikkelingshulpbudget fors gekort in coalitieakkoord 2024. Impact omstreden.",jaar:2024},
+    ]
+  },
+  {
+    id:"baudet",naam:"Thierry Baudet",partij:"FvD",periode:"2017–heden",rol:"Partijleider / Oprichter FvD",
+    ihl:{id:"ihl",belofte:"Naleving internationaal recht en rechterlijke uitspraken",categorie:"Buitenland/IHL",status:"gebroken",impact:"negatief",toelichting:"Baudet heeft rechterlijke uitspraken herhaaldelijk als politiek gekleurd bestempeld en opgeroepen ze naast zich neer te leggen. Steunde actief wapenexport naar Israël ondanks gerechtelijk verbod.",jaar:2024,type:"ihl"},
+    vg:{id:"vg",belofte:"Positie Israël-Palestina: volksgevoel",categorie:"Buitenland/IHL",status:"gebroken",impact:"negatief",toelichting:"Baudet neemt extreme pro-Israël positie in en verspreidt desinformatie over het conflict. Positie staat haaks op meerderheidsoordeel Nederlandse bevolking.",jaar:2024,type:"vg"},
+    mot:{id:"mot",belofte:"Motiegedrag volksbelang",categorie:"Moties",status:"gebroken",impact:"negatief",toelichting:"Stemde structureel tegen moties voor klimaatbeleid, betaalbare zorg, huurdersbescherming en aanpak belastingontwijking. Diende voornamelijk moties in gericht op desinformatie-agenda en aanvallen op overheidsinstituties. Obstructief stemgedrag aantoonbaar in Handelingen.",jaar:2023,type:"mot"},
+    beloftes:[
+      {id:1,belofte:"Nederland uit de EU halen",categorie:"Democratie",status:"gebroken",impact:"gemengd",toelichting:"Na jaren campagneren nooit serieus geprobeerd. FvD heeft nooit coalitiemacht gehad om dit te realiseren en Baudet zelf verloor intern de steun.",jaar:2023},
+      {id:2,belofte:"Klimaatbeleid volledig terugdraaien",categorie:"Klimaat",status:"gebroken",impact:"gemengd",toelichting:"Klimaatwet en klimaatdoelen zijn niet teruggedraaid. FvD bleef in oppositie en kon dit beleid niet blokkeren.",jaar:2023},
+      {id:3,belofte:"Massa-immigratie stoppen",categorie:"Migratie",status:"gebroken",impact:"gemengd",toelichting:"Nooit in coalitie geweest om dit te realiseren. Immigratie nam toe tijdens zijn jaren als Kamerlid.",jaar:2023},
+      {id:4,belofte:"Onderwijs hervormen — geen indoctrinatie",categorie:"Onderwijs",status:"gebroken",impact:"gemengd",toelichting:"Geen enkel onderwijsbeleid gerealiseerd. Bleef in oppositie.",jaar:2022},
+      {id:5,belofte:"Transparantie en eerlijk debat",categorie:"Democratie",status:"gebroken",impact:"negatief",toelichting:"Baudet verspreidde aantoonbare desinformatie over COVID-19, verkiezingsfraude en klimaat. Intern FvD implodeerde door antisemitisme-affaires, intern machtsmisbruik en vertrek van vrijwel alle medeoprichters.",jaar:2022},
+      {id:6,belofte:"Lagere belastingen voor burgers",categorie:"Financiën",status:"gebroken",impact:"gemengd",toelichting:"Geen belastingverlaging gerealiseerd. Bleef in oppositie.",jaar:2022},
+      {id:7,belofte:"Beschermen Nederlandse cultuur en identiteit",categorie:"Sociaal",status:"gebroken",impact:"negatief",toelichting:"Vaag verkiezingsthema zonder concrete beleidsresultaten. Intern FvD-schandaal rond Jodenhaat schaadde geloofwaardigheid.",jaar:2022},
+    ]
+  },
+  {
+    id:"yesilguz",naam:"Dilan Yeşilgüz",partij:"VVD",periode:"2021–heden",rol:"Fractievoorzitter / Lijsttrekker VVD",
+    ihl:{id:"ihl",belofte:"Naleving rechterlijke uitspraken als minister van Justitie",categorie:"Buitenland/IHL",status:"gedeeltelijk",impact:"gemengd",toelichting:"Als minister van Justitie en Veiligheid belast met rechtsstaat. Steunde het hoger beroep tegen wapenexportverbod als lid van het kabinet. Publiek genuanceerder dan Wilders maar handelde conform kabinetsbeleid.",jaar:2024,type:"ihl"},
+    vg:{id:"vg",belofte:"Positie Israël-Palestina: volksgevoel",categorie:"Buitenland/IHL",status:"gedeeltelijk",impact:"gemengd",toelichting:"Yeşilgüz nam een gematigder pro-Israël positie in dan haar VVD-voorganger Rutte maar bleef het kabinetsbeleid steunen. Positie als onvoldoende kritisch ervaren door meerderheid bevolking.",jaar:2024,type:"vg"},
+    mot:{id:"mot",belofte:"Motiegedrag volksbelang",categorie:"Moties",status:"gedeeltelijk",impact:"gemengd",toelichting:"Als minister diende zij moties in voor aanpak georganiseerde criminaliteit en cyberveiligheid (positief). Stemde als fractieleider VVD tegen moties voor huurdersbescherming en hogere vermogensbelasting. Beleid weerspiegelt VVD-profiel: veiligheid voor burgers, economisch voor vermogensbezitters.",jaar:2024,type:"mot"},
+    beloftes:[
+      {id:1,belofte:"Harder optreden tegen georganiseerde misdaad",categorie:"Veiligheid",status:"gedeeltelijk",impact:"positief",toelichting:"Extra middelen voor politie en justitie, aanscherping wetgeving. Ondermijning bleef groeien mede door capaciteitstekorten.",jaar:2024},
+      {id:2,belofte:"Migratie drastisch verminderen",categorie:"Migratie",status:"gedeeltelijk",impact:"gemengd",toelichting:"Strengere asielwetgeving mede doorgedrukt. Totale migratiestop niet gerealiseerd.",jaar:2024},
+      {id:3,belofte:"VVD niet met PVV laten regeren",categorie:"Democratie",status:"gebroken",impact:"gemengd",toelichting:"Yeşilgüz sloot VVD aan bij coalitie met PVV na verkiezingsverlies 2023, wat haaks stond op eerdere signalen.",jaar:2024},
+      {id:4,belofte:"Sterke economie en lage lasten",categorie:"Economie",status:"gedeeltelijk",impact:"gemengd",toelichting:"Economie bleef groeien maar ongelijkheid nam toe. Lastenverlichting beperkt tot hogere inkomens.",jaar:2024},
+      {id:5,belofte:"Aanpak cybercriminaliteit",categorie:"Veiligheid",status:"nagekomen",impact:"positief",toelichting:"Nieuwe cyberveiligheidswetgeving doorgevoerd als minister van J&V. Samenwerking met NCTV versterkt.",jaar:2023},
+      {id:6,belofte:"Woningmarkt verder liberaliseren",categorie:"Wonen",status:"gedeeltelijk",impact:"negatief",toelichting:"Middenhuur deels geliberaliseerd wat voor hogere huren zorgde voor middeninkomens.",jaar:2024},
+    ]
+  },
+  {
+    id:"kuzu",naam:"Tunahan Kuzu",partij:"DENK",periode:"2014–heden",rol:"Fractievoorzitter / Medeoprichter DENK",
+    ihl:{id:"ihl",belofte:"Naleving internationaal humanitair recht inzake Israël/Gaza",categorie:"Buitenland/IHL",status:"nagekomen",impact:"positief",toelichting:"Kuzu was een van de meest uitgesproken critici van Israëls optreden in Gaza en pleitte consequent voor naleving van IHL, wapenembargo en erkenning van Palestijnse staat. Steunde het rechterlijk wapenexportverbod volledig.",jaar:2024,type:"ihl"},
+    vg:{id:"vg",belofte:"Positie Israël-Palestina: volksgevoel",categorie:"Buitenland/IHL",status:"nagekomen",impact:"positief",toelichting:"Kuzu neemt de meest consequent pro-Palestijnse positie van alle Kamerleden. Dit sluit aan bij meerderheidsoordeel over Israëls optreden maar is ook sterk verbonden aan zijn specifieke achterban.",jaar:2024,type:"vg"},
+    mot:{id:"mot",belofte:"Motiegedrag volksbelang",categorie:"Moties",status:"gedeeltelijk",impact:"positief",toelichting:"Diende moties in voor aanpak discriminatie op arbeidsmarkt (deels aangenomen), bescherming huurders en eerlijke behandeling migrantenkinderen in toeslagenaffaire. Veel moties verworpen door meerderheid. Stemde consequent voor sociale beschermingsmoties.",jaar:2023,type:"mot"},
+    beloftes:[
+      {id:1,belofte:"Aanpak institutioneel racisme",categorie:"Sociaal",status:"gedeeltelijk",impact:"positief",toelichting:"Discriminatie op arbeidsmarkt en door overheid structureel aangekaart. Motie-successen beperkt door minderheidsrol DENK.",jaar:2023},
+      {id:2,belofte:"Eerlijke behandeling alle Nederlanders ongeacht achtergrond",categorie:"Sociaal",status:"gedeeltelijk",impact:"positief",toelichting:"Heeft met name toeslagenaffaire-impact op migrantengezinnen aangekaart. Niet altijd even effectief door gebrek aan coalitiemacht.",jaar:2022},
+      {id:3,belofte:"Erkenning Palestijnse staat",categorie:"Democratie",status:"gedeeltelijk",impact:"gemengd",toelichting:"Nederland erkende Palestijnse staat nog niet maar er is beweging in EU-verband. Kuzu heeft dit consequent bepleit.",jaar:2024},
+      {id:4,belofte:"Betere zorg voor ouderen met migratieachtergrond",categorie:"Zorg",status:"gedeeltelijk",impact:"positief",toelichting:"Aandacht gevraagd voor cultureel sensitieve zorg. Beperkt beleidsresultaat.",jaar:2023},
+      {id:5,belofte:"Transparantie over eigen partijfinanciering",categorie:"Democratie",status:"gebroken",impact:"negatief",toelichting:"DENK kreeg kritiek op ondoorzichtige financieringsstructuren en banden met Turkse overheid. Kuzu ontkende maar volledig inzicht bleef uit.",jaar:2022},
+      {id:6,belofte:"Aanpak woningnood voor lage inkomens",categorie:"Wonen",status:"gedeeltelijk",impact:"positief",toelichting:"Consistent gepleit voor meer sociale huurwoningen. Als kleine oppositiepartij beperkte doorwerking.",jaar:2023},
     ]
   },
 ];
 
-function itemScore(status, impact) {
-  const s = status==="nagekomen"?100:status==="gedeeltelijk"?50:0;
-  const i = impact==="positief"?100:impact==="gemengd"?50:0;
-  return (s+i)/2;
+function itemScore(status,impact){
+  const s=status==="nagekomen"?100:status==="gedeeltelijk"?50:0;
+  const i=impact==="positief"?100:impact==="gemengd"?50:0;
+  return(s+i)/2;
 }
-function calcScore(pol, ihl, vg) {
-  const items = [...pol.beloftes];
-  if (ihl && pol.ihl) items.push(pol.ihl);
-  if (vg && pol.vg) items.push(pol.vg);
-  if (!items.length) return 0;
-  return Math.round(items.reduce((a,b) => a+itemScore(b.status,b.impact), 0) / items.length);
+function calcScore(pol,ihl,vg,mot){
+  const items=[...pol.beloftes];
+  if(ihl&&pol.ihl)items.push(pol.ihl);
+  if(vg&&pol.vg)items.push(pol.vg);
+  if(mot&&pol.mot)items.push(pol.mot);
+  if(!items.length)return 0;
+  return Math.round(items.reduce((a,b)=>a+itemScore(b.status,b.impact),0)/items.length);
 }
-function getVerdict(score) { return VERDICTS.find(v => score >= v.min); }
+function getVerdict(score){return VERDICTS.find(v=>score>=v.min);}
 
-let activePol="rutte", activeTab="beloftes", filterStatus="alles", filterImpact="alles";
-let openItem=null, showRanking=false, modeIhl=false, modeVg=false;
+let activePol="rutte",activeTab="beloftes",filterStatus="alles",filterImpact="alles";
+let openItem=null,showRanking=false,modeIhl=false,modeVg=false,modeMot=false;
 
-function getScore(pol) { return calcScore(pol, modeIhl, modeVg); }
-function getBaseScore(pol) { return calcScore(pol, false, false); }
+function getScore(pol){return calcScore(pol,modeIhl,modeVg,modeMot);}
+function getBaseScore(pol){return calcScore(pol,false,false,false);}
 
-function showPage(page) {
-  document.getElementById("pageTracker").classList.toggle("hidden", page !== "tracker");
-  document.getElementById("pageMethodologie").classList.toggle("hidden", page !== "methodologie");
-  document.getElementById("navTracker").classList.toggle("active", page === "tracker");
-  document.getElementById("navMeth").classList.toggle("active", page === "methodologie");
-  if (page === "tracker") { showRanking = false; document.getElementById("rankingView").classList.add("hidden"); document.getElementById("individualView").classList.remove("hidden"); }
+function showPage(page){
+  document.getElementById("pageTracker").classList.toggle("hidden",page!=="tracker");
+  document.getElementById("pageMethodologie").classList.toggle("hidden",page!=="methodologie");
+  document.getElementById("navTracker").classList.toggle("active",page==="tracker");
+  document.getElementById("navMeth").classList.toggle("active",page==="methodologie");
+  if(page==="tracker"){showRanking=false;document.getElementById("rankingView").classList.add("hidden");document.getElementById("individualView").classList.remove("hidden");}
   window.scrollTo(0,0);
 }
 
-function toggleMode(mode) {
-  if (mode==="ihl") modeIhl=!modeIhl;
-  if (mode==="vg") modeVg=!modeVg;
-  document.getElementById("btnIhl").classList.toggle("on", modeIhl);
-  document.getElementById("btnVg").classList.toggle("on", modeVg);
-  document.getElementById("disclaimerBar").classList.toggle("show", modeVg);
+function toggleMode(mode){
+  if(mode==="ihl")modeIhl=!modeIhl;
+  if(mode==="vg")modeVg=!modeVg;
+  if(mode==="mot")modeMot=!modeMot;
+  document.getElementById("btnIhl").classList.toggle("on",modeIhl);
+  document.getElementById("btnVg").classList.toggle("on",modeVg);
+  document.getElementById("btnMot").classList.toggle("on",modeMot);
+  document.getElementById("disclaimerBar").classList.toggle("show",modeVg);
   renderAll();
 }
 
-function renderAll() { renderPolSelector(); renderProfileCard(); renderTab(); renderRanking(); }
+function renderAll(){renderPolSelector();renderProfileCard();renderTab();renderRanking();}
 
-function renderPolSelector() {
-  document.getElementById("polSelector").innerHTML = POLITICIANS.map(p => {
-    const s=getScore(p), bs=getBaseScore(p), v=getVerdict(s), d=s-bs;
-    const dStr = d!==0?`<span class="score-delta" style="color:${d>0?'#22c55e':'#ef4444'}">${d>0?'+':''}${d}</span>`:"";
-    return `<button class="pol-btn ${p.id===activePol?'active':''}" onclick="selectPol('${p.id}')">${p.naam.split(" ").slice(-1)[0]}<span class="pol-score" style="color:${v.kleur}">${s}</span>${dStr}</button>`;
+function renderPolSelector(){
+  document.getElementById("polSelector").innerHTML=POLITICIANS.map(p=>{
+    const s=getScore(p),bs=getBaseScore(p),v=getVerdict(s),d=s-bs;
+    const dStr=d!==0?`<span class="score-delta" style="color:${d>0?"#22c55e":"#ef4444"}">${d>0?"+":""}${d}</span>`:"";
+    return`<button class="pol-btn ${p.id===activePol?"active":""}" onclick="selectPol('${p.id}')">${p.naam.split(" ").slice(-1)[0]}<span class="pol-score" style="color:${v.kleur}">${s}</span>${dStr}</button>`;
   }).join("");
 }
 
-function selectPol(id) {
-  activePol=id; activeTab="beloftes"; filterStatus="alles"; filterImpact="alles"; openItem=null;
-  renderPolSelector(); renderProfileCard();
+function selectPol(id){
+  activePol=id;activeTab="beloftes";filterStatus="alles";filterImpact="alles";openItem=null;
+  renderPolSelector();renderProfileCard();
   document.querySelectorAll(".tab-btn").forEach((b,i)=>b.classList.toggle("active",i===0));
-  showTabPanels("beloftes"); renderTab();
+  showTabPanels("beloftes");renderTab();
 }
 
-function renderProfileCard() {
+function renderProfileCard(){
   const pol=POLITICIANS.find(p=>p.id===activePol);
-  const score=getScore(pol), base=getBaseScore(pol), v=getVerdict(score), d=score-base;
+  const score=getScore(pol),base=getBaseScore(pol),v=getVerdict(score),d=score-base;
   document.getElementById("profileCard").style.borderColor=v.kleur+"33";
-  let scoreHtml = (modeIhl||modeVg)&&d!==0
-    ? `<div class="score-compare"><div class="score-block"><div class="score-num" style="color:var(--text3)">${base}</div><div class="score-label-sm">Basis</div></div><div class="score-arrow">→</div><div class="score-block"><div class="score-num" style="color:${v.kleur}">${score}</div><div class="score-denom">/ 100</div><div class="score-label-sm" style="color:${d>0?'#22c55e':'#ef4444'}">${d>0?'+':''}${d}</div></div></div>`
-    : `<div class="profile-score"><div class="score-num" style="color:${v.kleur}">${score}</div><div class="score-denom">/ 100</div></div>`;
-  document.getElementById("profileCard").innerHTML = `
+  let scoreHtml=(anyMode()&&d!==0)
+    ?`<div class="score-compare"><div class="score-block"><div class="score-num" style="color:var(--text3)">${base}</div><div class="score-label-sm">Basis</div></div><div class="score-arrow">→</div><div class="score-block"><div class="score-num" style="color:${v.kleur}">${score}</div><div class="score-denom">/ 100</div><div class="score-label-sm" style="color:${d>0?"#22c55e":"#ef4444"}">${d>0?"+":""}${d}</div></div></div>`
+    :`<div class="profile-score"><div class="score-num" style="color:${v.kleur}">${score}</div><div class="score-denom">/ 100</div></div>`;
+  document.getElementById("profileCard").innerHTML=`
     <div class="profile-info"><div class="profile-eyebrow">${pol.partij} · ${pol.rol}</div><div class="profile-name">${pol.naam}</div><div class="profile-period">${pol.periode}</div></div>
     ${scoreHtml}
     <div class="verdict-badge" style="background:${v.bg};border:2px solid ${v.kleur}44"><div class="verdict-icon">${v.icon}</div><div class="verdict-label" style="color:${v.kleur}">${v.label}</div><div class="verdict-sub">${v.sub}</div></div>`;
 }
 
-function switchTab(tab, btn) {
-  activeTab=tab;
-  document.querySelectorAll(".tab-btn").forEach(b=>b.classList.remove("active"));
-  btn.classList.add("active"); showTabPanels(tab); renderTab();
+function anyMode(){return modeIhl||modeVg||modeMot;}
+
+function switchTab(tab,btn){
+  activeTab=tab;document.querySelectorAll(".tab-btn").forEach(b=>b.classList.remove("active"));
+  btn.classList.add("active");showTabPanels(tab);renderTab();
 }
-function showTabPanels(tab) {
-  ["beloftes","analyse","oordeel"].forEach(t => document.getElementById("tab"+t.charAt(0).toUpperCase()+t.slice(1)).classList.toggle("hidden", t!==tab));
+function showTabPanels(tab){
+  ["beloftes","analyse","oordeel"].forEach(t=>document.getElementById("tab"+t.charAt(0).toUpperCase()+t.slice(1)).classList.toggle("hidden",t!==tab));
 }
-function renderTab() {
-  if (activeTab==="beloftes") renderBeloftes();
-  else if (activeTab==="analyse") renderAnalyse();
+function renderTab(){
+  if(activeTab==="beloftes")renderBeloftes();
+  else if(activeTab==="analyse")renderAnalyse();
   else renderOordeel();
 }
 
-function getVisibleItems(pol) {
+function getVisibleItems(pol){
   const items=[...pol.beloftes];
-  if (modeIhl && pol.ihl) items.push({...pol.ihl, categorie:"Buitenland/IHL"});
-  if (modeVg && pol.vg) items.push({...pol.vg, categorie:"Buitenland/IHL"});
+  if(modeIhl&&pol.ihl)items.push({...pol.ihl,categorie:"Buitenland/IHL"});
+  if(modeVg&&pol.vg)items.push({...pol.vg,categorie:"Buitenland/IHL"});
+  if(modeMot&&pol.mot)items.push({...pol.mot,categorie:"Moties"});
   return items;
 }
 
-function renderBeloftes() {
+function renderBeloftes(){
   const pol=POLITICIANS.find(p=>p.id===activePol);
   const items=getVisibleItems(pol);
-  const tot=items.length, nak=items.filter(b=>b.status==="nagekomen").length;
-  const ged=items.filter(b=>b.status==="gedeeltelijk").length, geb=items.filter(b=>b.status==="gebroken").length;
+  const tot=items.length,nak=items.filter(b=>b.status==="nagekomen").length;
+  const ged=items.filter(b=>b.status==="gedeeltelijk").length,geb=items.filter(b=>b.status==="gebroken").length;
   const filtered=items.filter(b=>(filterStatus==="alles"||b.status===filterStatus)&&(filterImpact==="alles"||b.impact===filterImpact));
-  document.getElementById("tabBeloftes").innerHTML =
+  document.getElementById("tabBeloftes").innerHTML=
     `<div class="stats-grid">${[["Totaal",tot,"#60a5fa"],["Nagekomen",nak,"#22c55e"],["Gedeeltelijk",ged,"#f59e0b"],["Gebroken",geb,"#ef4444"]].map(([l,v,c])=>`<div class="stat-card"><div class="stat-num" style="color:${c}">${v}</div><div class="stat-label">${l}</div></div>`).join("")}</div>
-    <div class="filters">${["alles","nagekomen","gedeeltelijk","gebroken"].map(f=>`<button class="filter-btn ${filterStatus===f?'active':''}" onclick="setFS('${f}')">${f==="alles"?"Alle status":STATUS[f].label}</button>`).join("")}<div class="filter-divider"></div>${["alles","positief","negatief","gemengd"].map(f=>`<button class="filter-btn ${filterImpact===f?'active':''}" onclick="setFI('${f}')">${f==="alles"?"Alle impact":IMPACT[f].label}</button>`).join("")}</div>
-    <div class="promise-list">${filtered.length===0?`<div style="text-align:center;color:var(--text4);padding:40px 0">Geen beloften gevonden.</div>`:filtered.map(b=>{
-      const st=STATUS[b.status],im=IMPACT[b.impact],cc=CAT_COLORS[b.categorie]||"#888",isOpen=openItem===b.id;
-      const xTag=b.type==="ihl"?`<span class="tag-ihl">🔵 Int. Recht</span>`:b.type==="vg"?`<span class="tag-vg">🟠 Volksgevoel</span>`:"";
-      return `<div class="promise-item ${isOpen?"open":""} ${b.type==="ihl"?"ihl-item":""} ${b.type==="vg"?"vg-item":""}" onclick="toggleItem('${b.id}')">
+    <div class="filters">${["alles","nagekomen","gedeeltelijk","gebroken"].map(f=>`<button class="filter-btn ${filterStatus===f?"active":""}" onclick="setFS('${f}')">${f==="alles"?"Alle status":STATUS[f].label}</button>`).join("")}<div class="filter-divider"></div>${["alles","positief","negatief","gemengd"].map(f=>`<button class="filter-btn ${filterImpact===f?"active":""}" onclick="setFI('${f}')">${f==="alles"?"Alle impact":IMPACT[f].label}</button>`).join("")}</div>
+    <div class="promise-list">${filtered.length===0?`<div style="text-align:center;color:var(--text4);padding:40px 0">Geen items gevonden.</div>`:filtered.map(b=>{
+      const st=STATUS[b.status],im=IMPACT[b.impact],cc=CAT[b.categorie]||"#888",isOpen=openItem===b.id;
+      const xTag=b.type==="ihl"?`<span class="tag-ihl">🔵 Int. Recht</span>`:b.type==="vg"?`<span class="tag-vg">🟠 Volksgevoel</span>`:b.type==="mot"?`<span class="tag-mot">🟢 Motie</span>`:"";
+      return`<div class="promise-item ${isOpen?"open":""} ${b.type==="ihl"?"ihl-item":""} ${b.type==="vg"?"vg-item":""} ${b.type==="mot"?"mot-item":""}" onclick="toggleItem('${b.id}')">
         <div class="promise-header"><div class="promise-left"><div class="promise-title">${b.belofte}</div><div class="promise-meta"><span class="cat-tag" style="background:${cc}22;color:${cc};border:1px solid ${cc}44">${b.categorie}</span>${xTag}<span class="promise-year">${b.jaar}</span></div></div>
         <div class="promise-right"><span class="status-badge" style="background:${st.bg};color:${st.kleur};border:1px solid ${st.kleur}44">${st.label}</span><span class="impact-icon" style="color:${im.kleur}">${im.icon}</span></div></div>
         <div class="promise-detail"><span style="color:${im.kleur};font-weight:700">${im.label}: </span>${b.toelichting}</div></div>`;
     }).join("")}</div>`;
 }
 
-function renderAnalyse() {
-  const pol=POLITICIANS.find(p=>p.id===activePol), items=getVisibleItems(pol), tot=items.length;
-  const sBars=["nagekomen","gedeeltelijk","gebroken"].map(k=>{const st=STATUS[k],w=items.filter(b=>b.status===k).length,pct=Math.round((w/tot)*100);return `<div class="bar-row"><div class="bar-label"><span style="color:${st.kleur}">${st.label}</span><span style="color:var(--text2)">${w} (${pct}%)</span></div><div class="bar-track"><div class="bar-fill" style="width:${pct}%;background:${st.kleur}"></div></div></div>`;}).join("");
-  const iBars=["positief","negatief","gemengd"].map(k=>{const im=IMPACT[k],w=items.filter(b=>b.impact===k).length,pct=Math.round((w/tot)*100);return `<div class="bar-row"><div class="bar-label"><span style="color:${im.kleur}">${im.label}</span><span style="color:var(--text2)">${w} (${pct}%)</span></div><div class="bar-track"><div class="bar-fill" style="width:${pct}%;background:${im.kleur}"></div></div></div>`;}).join("");
+function renderAnalyse(){
+  const pol=POLITICIANS.find(p=>p.id===activePol),items=getVisibleItems(pol),tot=items.length;
+  const sBars=["nagekomen","gedeeltelijk","gebroken"].map(k=>{const st=STATUS[k],w=items.filter(b=>b.status===k).length,pct=Math.round((w/tot)*100);return`<div class="bar-row"><div class="bar-label"><span style="color:${st.kleur}">${st.label}</span><span style="color:var(--text2)">${w} (${pct}%)</span></div><div class="bar-track"><div class="bar-fill" style="width:${pct}%;background:${st.kleur}"></div></div></div>`;}).join("");
+  const iBars=["positief","negatief","gemengd"].map(k=>{const im=IMPACT[k],w=items.filter(b=>b.impact===k).length,pct=Math.round((w/tot)*100);return`<div class="bar-row"><div class="bar-label"><span style="color:${im.kleur}">${im.label}</span><span style="color:var(--text2)">${w} (${pct}%)</span></div><div class="bar-track"><div class="bar-fill" style="width:${pct}%;background:${im.kleur}"></div></div></div>`;}).join("");
   document.getElementById("tabAnalyse").innerHTML=`<div class="analyse-grid"><div class="analyse-card"><div class="analyse-title">Status beloften</div>${sBars}</div><div class="analyse-card"><div class="analyse-title">Impact voor volk</div>${iBars}</div></div>`;
 }
 
-function renderOordeel() {
-  const pol=POLITICIANS.find(p=>p.id===activePol), score=getScore(pol), base=getBaseScore(pol), v=getVerdict(score), d=score-base;
-  const ladder=VERDICTS.map((vd,i)=>{const nm=VERDICTS[i-1]?.min-1||100,cur=vd.label===v.label;return `<div class="ladder-row ${cur?"":"dim"}"><div class="ladder-bar" style="background:${vd.kleur}"></div><div class="ladder-name" style="color:${vd.kleur};font-weight:${cur?700:400}">${vd.icon} ${vd.label}</div><div class="ladder-range">${vd.min}–${nm} punten</div>${cur?`<span class="ladder-you" style="color:${vd.kleur};background:${vd.bg};border:1px solid ${vd.kleur}44">← ${pol.naam.split(" ").slice(-1)[0]}</span>`:""}</div>`;}).join("");
-  const breakdown=(modeIhl||modeVg)?`<div class="score-breakdown"><div class="score-part" style="color:var(--text3);border-color:var(--border);background:var(--bg2)">⚖ Basis: <strong style="color:#93c5fd">${base}</strong></div>${modeIhl&&pol.ihl?`<div class="score-part" style="color:#a78bfa;border-color:#7c3aed44;background:#1a0d2e">🔵 Int. Recht: <strong>${itemScore(pol.ihl.status,pol.ihl.impact).toFixed(0)}/100</strong></div>`:""}${modeVg&&pol.vg?`<div class="score-part" style="color:#fb923c;border-color:#ea580c44;background:#2d1000">🟠 Volksgevoel: <strong>${itemScore(pol.vg.status,pol.vg.impact).toFixed(0)}/100</strong></div>`:""}${d!==0?`<div class="score-part" style="color:${d>0?"#22c55e":"#ef4444"};border-color:${d>0?"#22c55e44":"#ef444433"};background:${d>0?"#052e16":"#2d0707"}">Netto: ${d>0?"+":""}${d}</div>`:""}</div>`:"";
-  const posItems=getVisibleItems(pol).filter(b=>b.impact==="positief"), negItems=getVisibleItems(pol).filter(b=>b.impact==="negatief");
+function renderOordeel(){
+  const pol=POLITICIANS.find(p=>p.id===activePol),score=getScore(pol),base=getBaseScore(pol),v=getVerdict(score),d=score-base;
+  const ladder=VERDICTS.map((vd,i)=>{const nm=VERDICTS[i-1]?.min-1||100,cur=vd.label===v.label;return`<div class="ladder-row ${cur?"":"dim"}"><div class="ladder-bar" style="background:${vd.kleur}"></div><div class="ladder-name" style="color:${vd.kleur};font-weight:${cur?700:400}">${vd.icon} ${vd.label}</div><div class="ladder-range">${vd.min}–${nm} punten</div>${cur?`<span class="ladder-you" style="color:${vd.kleur};background:${vd.bg};border:1px solid ${vd.kleur}44">← ${pol.naam.split(" ").slice(-1)[0]}</span>`:""}</div>`;}).join("");
+  const breakdown=anyMode()?`<div class="score-breakdown"><div class="score-part" style="color:var(--text3);border-color:var(--border);background:var(--bg2)">⚖ Basis: <strong style="color:#93c5fd">${base}</strong></div>${modeIhl&&pol.ihl?`<div class="score-part" style="color:#a78bfa;border-color:#7c3aed44;background:#1a0d2e">🔵 IHL: <strong>${itemScore(pol.ihl.status,pol.ihl.impact).toFixed(0)}/100</strong></div>`:""}${modeMot&&pol.mot?`<div class="score-part" style="color:#34d399;border-color:#05966944;background:#022c1e">🟢 Moties: <strong>${itemScore(pol.mot.status,pol.mot.impact).toFixed(0)}/100</strong></div>`:""}${modeVg&&pol.vg?`<div class="score-part" style="color:#fb923c;border-color:#ea580c44;background:#2d1000">🟠 Volksgevoel: <strong>${itemScore(pol.vg.status,pol.vg.impact).toFixed(0)}/100</strong></div>`:""}${d!==0?`<div class="score-part" style="color:${d>0?"#22c55e":"#ef4444"};border-color:${d>0?"#22c55e44":"#ef444444"};background:${d>0?"#052e16":"#2d0707"}">Netto: ${d>0?"+":""}${d}</div>`:""}</div>`:"";
+  const posItems=getVisibleItems(pol).filter(b=>b.impact==="positief"),negItems=getVisibleItems(pol).filter(b=>b.impact==="negatief");
   document.getElementById("tabOordeel").innerHTML=`
     <div class="verdict-main" style="border:2px solid ${v.kleur}33"><div class="verdict-big-icon">${v.icon}</div><div class="verdict-big-label" style="color:${v.kleur}">${v.label}</div><div class="verdict-big-sub">${v.sub}</div><div class="score-pill" style="background:${v.bg};border:1px solid ${v.kleur}44"><span class="score-pill-num" style="color:${v.kleur}">${score}</span><span class="score-pill-denom"> / 100 punten</span></div>${breakdown}</div>
     <div class="ladder"><div class="ladder-title">Puntenschaal</div>${ladder}</div>
     <div class="impact-grid"><div class="impact-card"><div class="impact-card-title" style="color:var(--green)">Positief voor volk</div>${posItems.length?posItems.map(b=>`<div class="impact-item" style="border-left:2px solid #22c55e33">${b.belofte}</div>`).join(""):'<div class="empty-msg">Geen gevonden</div>'}</div><div class="impact-card"><div class="impact-card-title" style="color:var(--red)">Negatief / Pro-elite</div>${negItems.length?negItems.map(b=>`<div class="impact-item" style="border-left:2px solid #ef444433">${b.belofte}</div>`).join(""):'<div class="empty-msg">Geen gevonden</div>'}</div></div>`;
 }
 
-function renderRanking() {
+function renderRanking(){
   const sorted=[...POLITICIANS].map(p=>({...p,score:getScore(p),base:getBaseScore(p)})).sort((a,b)=>b.score-a.score);
   document.getElementById("legendDiv").innerHTML=VERDICTS.map(v=>`<div class="legend-item" style="background:${v.bg};border:1px solid ${v.kleur}44;color:${v.kleur}">${v.icon} ${v.label} (${v.min}+)</div>`).join("");
   const medals=["#fbbf24","#94a3b8","#b45309"];
   document.getElementById("rankingList").innerHTML=sorted.map((p,i)=>{
-    const v=getVerdict(p.score), d=p.score-p.base, medal=i<3?medals[i]:null;
-    const dHtml=(modeIhl||modeVg)&&d!==0?`<span class="rank-delta" style="color:${d>0?"#22c55e":"#ef4444"};background:${d>0?"#052e16":"#2d0707"};border:1px solid ${d>0?"#22c55e44":"#ef444444"}">${d>0?"+":""}${d}</span>`:"";
-    return `<div class="ranking-item" style="border:1px solid ${v.kleur}22" onclick="openPol('${p.id}')"><div class="rank-num" style="${medal?`border-color:${medal};color:${medal};background:${medal}22`:""}">${i+1}</div><div class="rank-info"><div class="rank-name">${p.naam}</div><div class="rank-meta">${p.partij} · ${p.rol}</div></div><div class="rank-scores">${dHtml}<div class="rank-score-wrap"><div class="rank-score" style="color:${v.kleur}">${p.score}</div><div class="rank-denom">/ 100</div></div></div><div class="rank-verdict" style="background:${v.bg};border:1px solid ${v.kleur}44;color:${v.kleur}">${v.icon} ${v.label}</div></div>`;
+    const v=getVerdict(p.score),d=p.score-p.base,medal=i<3?medals[i]:null;
+    const dHtml=anyMode()&&d!==0?`<span class="rank-delta" style="color:${d>0?"#22c55e":"#ef4444"};background:${d>0?"#052e16":"#2d0707"};border:1px solid ${d>0?"#22c55e44":"#ef444444"}">${d>0?"+":""}${d}</span>`:"";
+    return`<div class="ranking-item" style="border:1px solid ${v.kleur}22" onclick="openPol('${p.id}')"><div class="rank-num" style="${medal?`border-color:${medal};color:${medal};background:${medal}22`:""}">${i+1}</div><div class="rank-info"><div class="rank-name">${p.naam}</div><div class="rank-meta">${p.partij} · ${p.rol}</div></div><div class="rank-scores">${dHtml}<div class="rank-score-wrap"><div class="rank-score" style="color:${v.kleur}">${p.score}</div><div class="rank-denom">/ 100</div></div></div><div class="rank-verdict" style="background:${v.bg};border:1px solid ${v.kleur}44;color:${v.kleur}">${v.icon} ${v.label}</div></div>`;
   }).join("");
-  const mDesc=!modeIhl&&!modeVg?"Standaard score op basis van beloften en volksimpact.":`Score inclusief: ${modeIhl?"🔵 Naleving internationaal recht":""}${modeIhl&&modeVg?" + ":""}${modeVg?"🟠 Volksgevoel Israël/Palestina (subjectief)":""}`;
-  document.getElementById("methodologyText").innerHTML=`<strong style="color:var(--text3)">Methodologie:</strong> Score (0–100) = gemiddelde van belofte-nakoming en volksimpact per item. ${mDesc} Klik op een politicus voor het volledige profiel. <span style="color:#3b82f6;cursor:pointer" onclick="showPage('methodologie')">→ Lees de volledige methodologie</span>`;
+  const mDesc=!anyMode()?"Standaard score op basis van beloften en volksimpact.":`Actieve lagen: ${[modeIhl?"🔵 Int. Recht":"",modeMot?"🟢 Moties":"",modeVg?"🟠 Volksgevoel (subjectief)":""].filter(Boolean).join(" + ")}`;
+  document.getElementById("methodologyText").innerHTML=`<strong style="color:var(--text3)">Methodologie:</strong> Score (0–100) = gemiddelde van belofte-nakoming en volksimpact per item. ${mDesc} Klik op een politicus voor het volledige profiel. <span style="color:#3b82f6;cursor:pointer;text-decoration:underline" onclick="showPage('methodologie')">→ Lees de volledige methodologie</span>`;
 }
 
-function openPol(id) {
-  activePol=id; showRanking=false; activeTab="oordeel";
+function openPol(id){
+  activePol=id;showRanking=false;activeTab="oordeel";
   document.getElementById("rankingView").classList.add("hidden");
   document.getElementById("individualView").classList.remove("hidden");
   document.getElementById("btnRanking").classList.remove("active");
   document.getElementById("btnRanking").textContent="🏆 Totaalranking";
-  renderPolSelector(); renderProfileCard();
+  renderPolSelector();renderProfileCard();
   document.querySelectorAll(".tab-btn").forEach((b,i)=>b.classList.toggle("active",i===2));
-  showTabPanels("oordeel"); renderTab();
+  showTabPanels("oordeel");renderTab();
 }
 
-function toggleRanking() {
+function toggleRanking(){
   showRanking=!showRanking;
   document.getElementById("rankingView").classList.toggle("hidden",!showRanking);
   document.getElementById("individualView").classList.toggle("hidden",showRanking);
@@ -719,9 +695,9 @@ function toggleRanking() {
   document.getElementById("btnRanking").textContent=showRanking?"← Individueel profiel":"🏆 Totaalranking";
 }
 
-function setFS(f) { filterStatus=f; renderBeloftes(); }
-function setFI(f) { filterImpact=f; renderBeloftes(); }
-function toggleItem(id) { openItem=openItem===id?null:id; renderBeloftes(); }
+function setFS(f){filterStatus=f;renderBeloftes();}
+function setFI(f){filterImpact=f;renderBeloftes();}
+function toggleItem(id){openItem=openItem===id?null:id;renderBeloftes();}
 
 renderAll();
 </script>
